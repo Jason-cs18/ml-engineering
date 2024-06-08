@@ -8,7 +8,7 @@ Hi, this is Yan Lu. I'm documenting my learning notes in this blog. Besides, I'm
 
 In the blog, I categorize my notes on the following topics:
 
-- [Machine Learning Engineering (frameworks and coding)]()
+- [Machine Learning Engineering (workflow)](https://jason-cs18.github.io/ml-engineering/ml_engineer.html)
   - [Model Selection (a quick demo)]()
   - [Interactive UI (frontend for machine learning models)]()
   - [Web Backend (API route, rate limit, database)]()
@@ -17,15 +17,15 @@ In the blog, I categorize my notes on the following topics:
   - [Scalable Training Pipeline (distributed training)]()
   - [Hyperparameter Optimization (tuning)]()
   - [Monitor, Debug, Log, Test]() 
-- [Deep Learning Basics (models and learning approaches)]()
+- [Deep Learning Basics (models and training)](https://jason-cs18.github.io/ml-engineering/dl_basics.html)
   - [Transformers in NLP and Vision]()
   - [CLIP and Its Variants]()
   - [Contrastive Learning in NLP and Vision]()
-- [Research Advances on Sustainable AI]()
+- [Research Advances on Sustainable AI](https://jason-cs18.github.io/ml-engineering/sustainable_ai.html)
   - [Continuous Learning (adapt to new data)]()
-  - [Efficient Learning (cost-efficient traing)]()
+  - [Efficient Learning (cost-effective traing)]()
   - [Ensemble Learning (robust learning)]()
-  - [Efficient Inference (cost-efficient inference)]()
+  - [Efficient Inference (cost-effective inference)]()
 
 Here is my [personal homepage](https://jason-cs18.github.io/).
 

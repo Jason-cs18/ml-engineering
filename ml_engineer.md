@@ -2,6 +2,7 @@
 title: Engineer
 layout: default
 nav_order: 2
+has_children: true
 ---
 ML engineering often refers to the process of building and maintaining machine learning models. Thus, it is also similar to MLOps. From my perspective, it is also an standard workflow to build a machine learning model in production.
 
