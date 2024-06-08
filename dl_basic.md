@@ -8,4 +8,3 @@ Standard deep learning algorithms are consists of model architecture, training f
 
 - [Transformers in NLP and Vision]()
 - [CLIP and Its Variants]()
-- [Contrastive Learning in NLP and Vision]()
