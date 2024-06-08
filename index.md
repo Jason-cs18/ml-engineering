@@ -3,6 +3,20 @@ title: Home
 layout: home
 ---
 
+Hi, this is Yan Lu. I'm documenting my learning notes in this blog. Besides, I'm a system researcher on sustainable AI systems at New York University. 
+
+In the blog, I categorize my notes on the following topics:
+
+- [Machine Learning Engineering (frameworks and coding)]()
+- [Deep Learning Basics (models and learning approaches)]()
+- [Research Advances on Sustainable AI]()
+  - [Continuous Learning]()
+  - [Efficient Learning]()
+  - [Ensemble Learning]()
+  - [Efficient Inference]()
+
+Here is my [personal homepage](https://jason-cs18.github.io/).
+
 This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
 
 If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
