@@ -12,6 +12,7 @@ In the blog, I categorize my notes on the following topics:
   - [Model Selection (a quick demo)]()
   - [Interactive UI (frontend for machine learning models)]()
   - [Web Backend (API route, rate limit, database)]()
+  - [Manage AI Service with Container (docker, docker-compose)]()
   - [Inference Engine (fast serving)]()
   - [Scalable Training Pipeline (distributed training)]()
   - [Hyperparameter Optimization (tuning)]()
