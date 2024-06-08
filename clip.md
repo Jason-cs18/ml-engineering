@@ -1,5 +1,6 @@
 ---
-title: Transformers
+title: CLIP and its variants
+date: 2023-06-09
 layout: default
 parent: DL Basics
 nav_order: 1
