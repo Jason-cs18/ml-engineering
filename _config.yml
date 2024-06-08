@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: ML Engineering Blogs
+description: everything should be made as simple as possible, but not simpler
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://Jason-cs18.github.io/ml-engineering
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/Jason-cs18/ml-engineering
