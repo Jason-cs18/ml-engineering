@@ -7,7 +7,7 @@ has_children: true
 
 Sustainable AI targets to adapt on new data/task/domain within low energy cost. It contains many similar and hot sub-topics of AI, such as:
 
-- **[Continuous Learning]()**: Adapt to new data/task/domain without forgetting.
+- **[Continuous Learning](https://jason-cs18.github.io/ml-engineering/cl_research.html)**: Adapt to new data/task/domain without forgetting.
 - **Transfer Learning**: Adapt to new data/task/domain fast.
 - **Ensemble Learning**: Inference on new data/task/domain robustly. 
 
