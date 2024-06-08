@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
 Hi, this is Yan Lu. I'm documenting my learning notes in this blog. Besides, I'm a system researcher on sustainable AI systems at New York University. 
