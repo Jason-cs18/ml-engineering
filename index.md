@@ -20,6 +20,7 @@ In the blog, I categorize my notes on the following topics:
 - [Deep Learning Basics (models and training)](https://jason-cs18.github.io/ml-engineering/dl_basics.html)
   - [Transformers in NLP and Vision](https://jason-cs18.github.io/ml-engineering/transformers.html)
   - [CLIP and Its Variants](https://jason-cs18.github.io/ml-engineering/clip.html)
+  - [Diffusion and Its Variants](https://jason-cs18.github.io/ml-engineering/diffusion.html)
 - [Research Advances on Sustainable AI](https://jason-cs18.github.io/ml-engineering/sustainable_ai.html)
   - [Continuous Learning (adapt to new data)](https://jason-cs18.github.io/ml-engineering/cl_research.html)
   - [Efficient Learning (cost-effective traing)]()
