@@ -5,10 +5,10 @@ parent: Engineer
 nav_order: 2
 ---
 
-After we got a demo script to run object detection model, we need to build a interactive webUI for this. In this blog, we introduce two popular libraries to build webUI.
+After we got a demo script to run object detection model, we need to build a interactive webUI for this. With two popular webUI libraries, we can implement a simple webUI within few lines of code.
 
 
-> object detection demo has been introduced in [this blog](https://jason-cs18.github.io/ml-engineering/model_selection.html)
+> If you do not familar with a demo script of object detection, please checkout our previous [blog](https://jason-cs18.github.io/ml-engineering/model_selection.html).
 
 
 ## Building WebUI with Gradio
