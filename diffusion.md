@@ -1,5 +1,5 @@
 ---
-title: Diffusion
+title: Diffusion and its variants
 layout: default
 parent: DL Basics
 nav_order: 3
