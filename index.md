@@ -30,7 +30,7 @@ In the blog, I categorize my notes on the following topics:
   - [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
   
 
-Here is my [personal homepage](https://jason-cs18.github.io/).
+Most code of this blog is available on [DLTK](https://github.com/Jason-cs18/DLTK).
 
 
 
