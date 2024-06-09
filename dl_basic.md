@@ -8,3 +8,4 @@ Standard deep learning algorithms are consists of model architecture, training f
 
 - [Transformers in NLP and Vision](https://jason-cs18.github.io/ml-engineering/transformers.html)
 - [CLIP and Its Variants](https://jason-cs18.github.io/ml-engineering/clip.html)
+- [Diffusion and Its Variants](https://jason-cs18.github.io/ml-engineering/diffusion.html)
