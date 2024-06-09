@@ -18,7 +18,7 @@ In this blog, we will introduce the diffusion model and its variants, which have
 ## Text to 3D
 Although 2D synthesis has gained significant progress, the view consistency still remains a challenge. To bridge this gap, some works have proposed to generate 3D objects from text descriptions directly.
 
-Unlike 2D synthesis, 3D synthesis is a challenging task due to
+Usually, 3D synthesis is a challenging task due to
 
 - Limited high quality 3D training data
 - Hard to align different modal in 3D space
