@@ -26,8 +26,10 @@ In the blog, I categorize my notes on the following topics:
   - [Ensemble Learning (robust learning)]()
   - [Efficient Inference (cost-effective inference)]()
 - [LLM Systems](https://jason-cs18.github.io/ml-engineering/llm.html)
+  - [Medical LLMs](https://jason-cs18.github.io/ml-engineering/medical_llm.html)
+  - [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
   
-  
+
 Here is my [personal homepage](https://jason-cs18.github.io/).
 
 

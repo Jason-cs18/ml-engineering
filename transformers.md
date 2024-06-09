@@ -8,11 +8,18 @@ nav_order: 1
 Transformers have shown strong results on vision and language compared with conventional CNNs and RNNs. Especially on large-scale dataset, the performance of transformers is often significantly better than others.
 
 
-## Transformers and Self-Attention Mechanism
+## Transformers and self-attention mechanism
 
-## Large-Language Models (LLMs)
+## Large-language models (LLMs)
 
-## Vision Transformers (ViTs)
+## Vision transformers (ViTs)
+
+## Transformers alternatives
+
+### Mamba
+
+### Vision Mamba
+
 
 ## Conclusion
 
@@ -25,3 +32,6 @@ Transformers have shown strong results on vision and language compared with conv
 4. [ICLR'20] [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929), Google Research
 5. [ICCV'21] [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030), Microsoft Research Asia
 6. [ECCV'22] [End-to-End Object Detection with Transformers](https://arxiv.org/abs/2005.12872), Meta AI
+7. [arXiv 2023.12] [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://github.com/state-spaces/mamba), Princeton University
+8. [ICML'24] [Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality](https://github.com/state-spaces/mamba), Princeton University
+9. [ICML'24] [Efficient Visual Representation Learning with Bidirectional State Space Model](https://github.com/hustvl/Vim), Huazhong University of Science and Technology
