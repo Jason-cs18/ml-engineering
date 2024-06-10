@@ -31,3 +31,7 @@ We recommend ...
 ---
 
 ## References
+1. [Deploying HuggingFace models on Triton](https://github.com/triton-inference-server/tutorials/blob/main/HuggingFace/README.md#deploying-on-the-python-backend)
+2. [Conceptual Guides for NVIDIA Triton](https://github.com/triton-inference-server/tutorials/tree/main/Conceptual_Guide)
+3. [Ray Serve Documentation](https://docs.ray.io/en/latest/serve/index.html)
+4. [Serving models with Triton Server in Ray Serve](https://docs.ray.io/en/latest/serve/tutorials/triton-server-integration.html)
