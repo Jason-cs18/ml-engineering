@@ -1,5 +1,5 @@
 ---
-title: Collaborative Learning
+title: Collaborative Learning （TBD）
 layout: default
 parent: Sustainable AI
 nav_order: 2
