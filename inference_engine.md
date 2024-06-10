@@ -40,6 +40,6 @@ Thus, we recommend to use ONNX or TensorRT for inference acceleration on NVIDIA 
 ---
 
 ## References
-1. torchscript-to-tvm https://github.com/masahi/torchscript-to-tvm/blob/master/detr/detr_test.py
-2. OpenMMlab导出DETR模型并用onnxruntime推理 https://blog.csdn.net/taifyang/article/details/136127159
-3. OpenMMlab导出yolox模型并用onnxruntime和tensorrt推理 https://blog.csdn.net/taifyang/article/details/134368390
+1. [torchscript-to-tvm](https://github.com/masahi/torchscript-to-tvm/blob/master/detr/detr_test.py)
+2. [OpenMMlab导出DETR模型并用onnxruntime推理](https://blog.csdn.net/taifyang/article/details/136127159)
+3. [OpenMMlab导出yolox模型并用onnxruntime和tensorrt推理](https://blog.csdn.net/taifyang/article/details/134368390)

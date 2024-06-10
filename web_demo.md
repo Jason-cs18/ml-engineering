@@ -24,5 +24,5 @@ After we got a demo script to run object detection model, we can build a simple 
 In this blog, we have learned to build a simple webUI for the object detection model. Usually, Gradio provides more UI components and Streamlit supports more customization. Thus, we recommend using Gradio to build a simple webUI and Streamlit for more complex webUI.
 
 ## References
-1. https://www.gradio.app/
-2. https://streamlit.io/#install
+1. [Gradio](https://www.gradio.app/)
+2. [Streamlit](https://streamlit.io/#install)

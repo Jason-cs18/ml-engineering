@@ -91,5 +91,5 @@ In this blog, we have learned to build a complete web-based AI application (back
 
 ---
 ## Reference
-1. FastAPI https://fastapi.tiangolo.com/
-2. mount_gradio_app https://www.gradio.app/docs/gradio/mount_gradio_app
+1. [FastAPI](https://fastapi.tiangolo.com/)
+2. [mount_gradio_app](https://www.gradio.app/docs/gradio/mount_gradio_app)

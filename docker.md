@@ -12,6 +12,7 @@ Docker in production ensures consistent, scalable, and secure application deploy
 - [Run a docker container with local codebase](#run-a-docker-container-with-local-codebase)
 - [Use docker-compose to run/manage multiple AI services](#use-docker-compose-to-runmanage-multiple-ai-services)
 - [Conclusion](#conclusion)
+- [References](#references)
 
 ## Build a docker image for your AI services
 ```Dockerfile
@@ -84,3 +85,6 @@ docker-compose down # stop all services
 
 ## Conclusion
 In this blog, we have learned to containize our AI services with docker and docker-compose. In practice, many applications/serives has their own dependencies (e.g., python-3.10 or tensorflow-2.1.0). Thus, using docker container to isolate these environments is recommend. If your application contains many AI services, using docker-compose is a good choice to run/manage/stop them.
+
+## References
+1. [Docker Guide](https://docs.docker.com/guides/)

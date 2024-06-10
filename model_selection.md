@@ -15,6 +15,7 @@ When ML engineers start a new project, they often need to build a fast demo to p
 - [Use ModelScope to build a demo](#use-modelscope-to-build-a-demo)
 - [Use MMDetection to build a demo](#use-mmdetection-to-build-a-demo)
 - [Conclusion](#conclusion)
+- [References](#references)
 
 ## Use HuggingFace to build a demo
 
@@ -24,3 +25,8 @@ When ML engineers start a new project, they often need to build a fast demo to p
 
 ## Conclusion
 In this page, we have learned how to build a fast demo for image object detection with three popular model zoos (HuggingFace, ModelScope, and MMDetection). In the [next blog](https://jason-cs18.github.io/ml-engineering/web_demo.html), we will write a interactive webUI for this demo.
+
+## References
+1. [HuggingFace](https://huggingface.co/)
+2. [ModelScope](https://modelscope.cn/)
+3. [OpenMMLab](https://platform.openmmlab.com/modelzoo/)
