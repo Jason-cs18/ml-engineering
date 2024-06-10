@@ -13,9 +13,14 @@ Collaborative learning aims to improve the performance of homongeneous/heterogen
 
 In this blog, we summarize recent works on collaborative learning.
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 
 ​
+## Conclusion
 
 
-### References
+## References

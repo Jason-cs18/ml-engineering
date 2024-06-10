@@ -6,6 +6,9 @@ nav_order: 9
 ---
 _open sentence_
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+
 ## Build a docker image for your AI services
 
 ## Run a docker container with local database

@@ -7,6 +7,16 @@ nav_order: 1
 
 Transformers have shown strong results on vision and language compared with conventional CNNs and RNNs. Especially on large-scale dataset, the performance of transformers is often significantly better than others.
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Transformers and self-attention mechanism](#transformers-and-self-attention-mechanism)
+- [Large-language models (LLMs)](#large-language-models-llms)
+- [Vision transformers (ViTs)](#vision-transformers-vits)
+- [Transformers alternatives](#transformers-alternatives)
+  - [Mamba](#mamba)
+  - [Vision Mamba](#vision-mamba)
+- [Conclusion](#conclusion)
+- [Reference](#reference)
 
 ## Transformers and self-attention mechanism
 

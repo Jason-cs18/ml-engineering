@@ -9,6 +9,12 @@ After we got a demo script to run object detection model, we can build a simple 
 
 > If you do not familar with a demo script of object detection, please checkout our previous [blog](https://jason-cs18.github.io/ml-engineering/model_selection.html).
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Building WebUI with Gradio](#building-webui-with-gradio)
+- [Building WebUI with Streamlit](#building-webui-with-streamlit)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ## Building WebUI with Gradio
 

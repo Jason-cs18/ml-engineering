@@ -14,6 +14,16 @@ To push its limit on inference, we usually convert them to a static graph and us
   - OS: Ubuntu 18.04
   - GPU: Tesla V100 32G
 ```
+
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Use TorchScript](#use-torchscript)
+- [Use ONNX](#use-onnx)
+- [Use TensorRT](#use-tensorrt)
+- [Use TVM](#use-tvm)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ## Use TorchScript
 
 ## Use ONNX

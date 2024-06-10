@@ -6,6 +6,15 @@ nav_order: 2
 ---
 To push the last mile of LLM deplyment, a lot of works focus on training and serving LLMs within low cost. In this blog, we summarize the most important works in efficient LLMs.
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Background](#background)
+- [Survey](#survey)
+- [Efficient LLM Serving](#efficient-llm-serving)
+- [Efficient LLM Training](#efficient-llm-training)
+- [Conclusion](#conclusion)
+- [Reference](#reference)
+
 ## Background
 To catch up the latest progress of efficient LLMs, I highly recommend [the introduction course (TinyML and Efficient Deep Learning Computing)](https://hanlab.mit.edu/courses/2023-fall-65940) from MIT Song Lab.
 

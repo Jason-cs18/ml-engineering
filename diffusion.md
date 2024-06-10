@@ -9,6 +9,14 @@ Unlike text, image and video data are often high-dimension and contain the inner
 
 In this blog, we will introduce the diffusion model and its variants, which have been widely used in image/video generation.
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Image Synthesis](#image-synthesis)
+- [Video Synthesis](#video-synthesis)
+- [Text to 3D](#text-to-3d)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ## Image Synthesis
 
 

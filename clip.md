@@ -8,6 +8,18 @@ nav_order: 2
 
 Transfromers provide a simple and unified framework to compress information of multiple modals. Intutively, combining them and learning a multimdal representation is feasible and promising for unimodal tasks. In this blog, we summarize the milestone works on multimodal representation learning and discuss their limitations.
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Rationale behind multimodal learning](#rationale-behind-multimodal-learning)
+- [CLIP](#clip)
+- [SAM](#sam)
+- [BLIP and BLIP-2](#blip-and-blip-2)
+- [ImageBind](#imagebind)
+- [LanguageBind](#languagebind)
+- [LLaVA](#llava)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ## Rationale behind multimodal learning
 - Data Augmentation
 

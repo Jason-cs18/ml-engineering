@@ -9,6 +9,13 @@ When ML engineers start a new project, they often need to build a fast demo to p
 
 > If you need to find a specific model zoo of vision (e.g., object detection, pose estimation, etc), I recommend you checkout the model zoo of [OpenMMLab](https://platform.openmmlab.com/modelzoo/), which consists of [MMDetection](https://github.com/open-mmlab/mmdetection), [MMSegmentation](https://github.com/open-mmlab/mmsegmentation), [MMagic](https://github.com/open-mmlab/mmagic), [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [MMOCR](https://github.com/open-mmlab/mmocr), [MMPose](https://github.com/open-mmlab/mmpose), [MMAction2](https://github.com/open-mmlab/mmaction2) popular libraries. Also, it provides a series deployment toolbox (e.g., [MMDeploy](https://github.com/open-mmlab/mmdeploy) and [MMRazor](https://github.com/open-mmlab/mmrazor)) to accelerate model inference speed. 
 
+## Table of contents
+- [Table of contents](#table-of-contents)
+- [Use HuggingFace to build a demo](#use-huggingface-to-build-a-demo)
+- [Use ModelScope to build a demo](#use-modelscope-to-build-a-demo)
+- [Use MMDetection to build a demo](#use-mmdetection-to-build-a-demo)
+- [Conclusion](#conclusion)
+
 ## Use HuggingFace to build a demo
 
 ## Use ModelScope to build a demo
