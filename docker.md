@@ -88,3 +88,4 @@ In this blog, we have learned to containize our AI services with docker and dock
 
 ## References
 1. [Docker Guide](https://docs.docker.com/guides/)
+2. [Docker-compose](https://docs.docker.com/compose/)
