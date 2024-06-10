@@ -8,6 +8,10 @@ _open sentence_
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
+- [Build a docker image for your AI services](#build-a-docker-image-for-your-ai-services)
+- [Run a docker container with local database](#run-a-docker-container-with-local-database)
+- [Use docker-compose to run/manage multiple AI services](#use-docker-compose-to-runmanage-multiple-ai-services)
+- [Conclusion](#conclusion)
 
 ## Build a docker image for your AI services
 
