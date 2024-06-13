@@ -21,7 +21,13 @@ In this blog, we will guide you deploy [DETR-ResNet50](https://huggingface.co/fa
 ## Table of contents
 - [Table of contents](#table-of-contents)
 - [Use TorchScript](#use-torchscript)
+  - [1. Prepare PyTorch model](#1-prepare-pytorch-model)
+  - [2. Convert PyTorch model to TorchScript](#2-convert-pytorch-model-to-torchscript)
+  - [3. Test TorchScript model](#3-test-torchscript-model)
 - [Use ONNX](#use-onnx)
+  - [1. Prepare PyTorch model](#1-prepare-pytorch-model-1)
+  - [2. Convert PyTorch model to TorchScript](#2-convert-pytorch-model-to-torchscript-1)
+  - [3. Test TorchScript model](#3-test-torchscript-model-1)
 - [Use TensorRT](#use-tensorrt)
 - [Use TVM](#use-tvm)
 - [Conclusion](#conclusion)
@@ -29,7 +35,19 @@ In this blog, we will guide you deploy [DETR-ResNet50](https://huggingface.co/fa
 
 ## Use TorchScript
 
+### 1. Prepare PyTorch model
+
+### 2. Convert PyTorch model to TorchScript
+
+### 3. Test TorchScript model
+
 ## Use ONNX
+
+### 1. Prepare PyTorch model
+skip
+### 2. Convert PyTorch model to TorchScript
+
+### 3. Test TorchScript model
 
 ## Use TensorRT
 
