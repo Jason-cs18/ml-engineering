@@ -4,11 +4,11 @@ layout: default
 parent: Engineer
 nav_order: 3
 ---
-PyTorch provides a flexible and simple component for AI researchers and engineers to build and train their models. However, its dynamic nature makes it challenging to optimize in production. Thus, inference with a native PyTorch model is slow and inefficient.
+PyTorch provides a flexible and simple component for AI researchers and engineers to build and train deep learning models. However, its dynamic nature makes it challenging to optimize in production. Thus, a native PyTorch model is slow and inefficient.
 
 To get a low-latency inference, we usually use inference engines, such as TorchScript, ONNX and TensorRT. They enable low-cost inference with graph optimization and optimized operaters.
 
-In this blog, we will guide you deploy [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with TorchScript, ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. 
+In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with TorchScript, ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. 
 
 
 ```
