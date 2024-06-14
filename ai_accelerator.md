@@ -3,7 +3,7 @@ title: AI Accelerator
 layout: default
 nav_order: 6
 ---
-AI tasks are computationally intensive, and the use of GPUs is essential for accelerating deep learning jobs. In our daily work, we often notice that GPUs are under-utilized and perform poorly. Thus, it is a good idea to understand the basic usage of GPUs and how to optimize deep learning jobs for better performance. In this article, we will dive into GPU architecture and introduce basic usage of CUDA programing which is a parallel computing platform and application programming interface developed by NVIDIA.
+AI tasks require significant computational power, and GPUs are crucial for speeding up deep learning processes. However, we often observe that GPUs are not fully utilized and deliver suboptimal performance. To address this issue, it is important to comprehend GPU architecture and learn how to optimize deep learning jobs for improved efficiency. This article focuses on providing insights into CUDA programming, a parallel computing platform developed by NVIDIA, which enables efficient utilization of GPUs in AI tasks. By understanding the fundamentals of GPU usage and optimizing deep learning workflows, users can enhance their AI job performance significantly.
 
 ## GPU Architecture
 > related materials:
