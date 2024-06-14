@@ -5,7 +5,7 @@ parent: DL Basics
 nav_order: 1
 ---
 
-Transformers have shown strong results on vision and language compared with conventional CNNs and RNNs. Especially on large-scale dataset, the performance of transformers is often significantly better than others.
+Transformer architecture has become the the de-facto standard for vision and natural language tasks. In this blog, we will discuss the key components of the transformer architecture and how it enables efficient and effective representation learning for both vision and natural language tasks.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)

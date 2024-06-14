@@ -6,11 +6,11 @@ parent: DL Basics
 nav_order: 2
 ---
 
-Transfromers provide a simple and unified framework to compress information of multiple modals. Intutively, combining them and learning a multimdal representation is feasible and promising for unimodal tasks. In this blog, we summarize the milestone works on multimodal representation learning and discuss their limitations.
+As mentioned in [last blog](https://jason-cs18.github.io/ml-engineering/transformers.html), scaling model size and data size is a key to improve performance of transformer-based models. However, collecting large-scale data is not always an easy task. In this blog, I will introduce some multimodal learning methods, which expand the training data to other modals.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
-- [Rationale behind multimodal learning](#rationale-behind-multimodal-learning)
+- [Multimodal Learning](#multimodal-learning)
 - [CLIP](#clip)
 - [SAM](#sam)
 - [BLIP and BLIP-2](#blip-and-blip-2)
@@ -20,8 +20,18 @@ Transfromers provide a simple and unified framework to compress information of m
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## Rationale behind multimodal learning
-- Data Augmentation
+## Multimodal Learning
+![](https://linzhiqiu.github.io/papers/cross_modal/images/motivation_new.png)
+
+_image source: [Multimodality Helps Unimodality](https://linzhiqiu.github.io/papers/cross_modal/)_
+
+Owing to dataset bias, a majority of unimodal models find it difficult to generalize effectively on new tasks or domains. Take, for instance, image classification models that are trained on ImageNet and struggle to classify blurred images. However, if we obtain the audio corresponding to the blurred image, we can potentially predict the class of the blurred image with greater ease (such as a car). As depicted in the figure presented above, we are able to utilize additional text or audio information to enhance the discriminatory capacity. 
+
+![](https://linzhiqiu.github.io/papers/cross_modal/images/methodology.png)
+
+_image source: [Multimodality Helps Unimodality](https://linzhiqiu.github.io/papers/cross_modal/)_
+
+To employ multimodal information, contrastive learning and transformer architecture are always a good choice. With contrasive learning, we can learn a representation that is invariant to the modality and align multiple modals. Transformers are able to compress multimodal information into a same semantic representation.
 
 ## CLIP
 
