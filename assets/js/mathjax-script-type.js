@@ -1,18 +1,34 @@
-// Copied from https://docs.mathjax.org/en/latest/upgrading/v2.html#changes-in-the-mathjax-api
-MathJax = {
-    options: {
-      renderActions: {
-        findScript: [10, function (doc) {
-          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-            const display = !!node.type.match(/; *mode=display/);
-            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-            const text = document.createTextNode('');
-            node.parentNode.replaceChild(text, node);
-            math.start = {node: text, delim: '', n: 0};
-            math.end = {node: text, delim: '', n: 0};
-            doc.math.push(math);
-          }
-        }, '']
-      }
+// Mostly copied from https://github.com/KaTeX/KaTeX/tree/main/contrib/mathtex-script-type
+// Options for global command definitions added by @pdmosses
+
+// import katex from "katex";
+
+const macros = {};
+
+let scripts = document.body.getElementsByTagName("script");
+scripts = Array.prototype.slice.call(scripts);
+scripts.forEach(function(script) {
+    if (!script.type || !script.type.match(/math\/tex/i)) {
+        return -1;
     }
-  };
+    const display =
+          (script.type.match(/mode\s*=\s*display(;|\s|\n|$)/) != null);
+
+    const katexElement = document.createElement(display ? "div" : "span");
+    katexElement.setAttribute("class",
+                              display ? "equation" : "inline-equation");
+    try {
+        katex.render(script.text, katexElement, {
+          displayMode: display,
+          globalGroup: true,
+          trust: true,
+          strict: false,
+          throwOnError: false,
+          macros
+        });
+    } catch (err) {
+        //console.error(err); linter doesn't like this
+        katexElement.textContent = script.text;
+    }
+    script.parentNode.replaceChild(katexElement, script);
+});
