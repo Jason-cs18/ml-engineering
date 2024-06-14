@@ -22,6 +22,7 @@ To catch up the latest progress of efficient LLMs, I highly recommend [the intro
 - [arXiv 2023.02] [Full Stack Optimization of Transformer Inference: a Survey](https://arxiv.org/abs/2302.14017), UC Berkeley
 - [arXiv 2023.12] [Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems](https://arxiv.org/pdf/2312.15234), Carnegie Mellon University
 - [TMLR'24] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University
+- [arXiv 2024.04] [A Survey on Efficient Inference for Large Language Models](https://arxiv.org/abs/2404.14294), Infinigence-AI and Tsinghua University
 
 ## Efficient LLM Serving
 
