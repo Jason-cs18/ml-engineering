@@ -7,8 +7,8 @@ AI tasks are computationally intensive, and the use of GPUs is essential for acc
 
 ## GPU Architecture
 > related materials:
-> 1. [How GPU Computing Works | NVIDIA GTC 2021](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31151/)
-> 2. [Programming Heterogeneous Computing Systems with GPUs and other Accelerators (Spring 2023) | ETH Zurich](https://safari.ethz.ch/projects_and_seminars/spring2023/doku.php?id=heterogeneous_systems)
+> 1. [How GPU Computing Works, NVIDIA GTC 2021](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31151/)
+> 2. [Programming Heterogeneous Computing Systems with GPUs and other Accelerators (Spring 2023), ETH Zurich](https://safari.ethz.ch/projects_and_seminars/spring2023/doku.php?id=heterogeneous_systems)
 
 GPUs are designed to perform highly parallel computations, making them well-suited for tasks such as deep learning and computer graphics. They are made up of a large number of processing cores, each of which can execute a single instruction at a time. These cores are connected by a high-speed interconnect, allowing them to communicate with each other and coordinate their work.
 
