@@ -34,18 +34,39 @@ _image source: [Multimodality Helps Unimodality](https://linzhiqiu.github.io/pap
 To employ multimodal information, contrastive learning and transformer architecture are always a good choice. With contrasive learning, we can learn a representation that is invariant to the modality and align multiple modals. Transformers are able to compress multimodal information into a same semantic representation.
 
 ## CLIP
+![](https://github.com/openai/CLIP/raw/main/CLIP.png)
+
+_image source: [CLIP](https://github.com/openai/CLIP)_
 
 ## SAM
+![](https://github.com/facebookresearch/segment-anything/raw/main/assets/model_diagram.png?raw=true)
+
+_image source: [segment-anything](https://github.com/facebookresearch/segment-anything)_
 
 ## BLIP and BLIP-2
 
+![](https://github.com/salesforce/LAVIS/raw/main/projects/blip2/blip2_illustration.png)
+
+_image source: [LAVIS](https://github.com/salesforce/LAVIS?tab=readme-ov-file)_
+
 ## ImageBind
 
+![](https://user-images.githubusercontent.com/8495451/236859695-ffa13364-3e39-4d99-a8da-fbfab17f9a6b.gif)
+
+_image source: [ImageBind](https://github.com/facebookresearch/ImageBind)_
+
 ## LanguageBind
+![](https://github.com/PKU-YuanGroup/LanguageBind/raw/main/assets/languagebind.jpg)
+
+_image source: [LanguageBind](https://github.com/PKU-YuanGroup/LanguageBind)_
 
 ## LLaVA
+![](https://llava-vl.github.io/images/llava_arch.png)
+
+_image source: [LLaVA](https://llava-vl.github.io/)_
 
 ## Conclusion
+Unlike training with more data, multimodal learning is an more promising direction to improve performance. However, it is still a challenging task to fusion unpaired data from different modals.
 
 ----
 ## References
