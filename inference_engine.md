@@ -15,7 +15,7 @@ In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.c
 - Model: DETR-ResNet50
 - Experiment environments
   - OS: Ubuntu 18.04
-  - GPU: GeForce GTX 1070
+  - GPU: NVIDIA Tesla V100
 ```
 
 ## Table of contents
@@ -37,53 +37,77 @@ In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.c
 
 ### 1. Prepare PyTorch model
 ```python
+import time
+import argparse
+
+from rich.console import Console
+from omegaconf import OmegaConf
+
 from transformers import DetrImageProcessor, DetrForObjectDetection
 import torch
-import time
-from loguru import logger
 from PIL import Image
 
-img_url = "demo.jpg" # replace with your image url
-image = Image.open(img_url)
-batch_size = 1
+console = Console()
 
-logger.debug(f"start profile detr with batch_size={batch_size}")
+def parse_args():
+    parser = argparse.ArgumentParser(description="PyTorch Inference Script")
+    parser.add_argument("--config", type=str, default="/mnt/data/production_template/DLTK/dlapp_template/configs/infer_default.yaml", help="Path to config file")
+    parser.add_argument("--mode", type=str, default="image", help="test image or video")
+    parser.add_argument("--batch_size", type=int, default=1, help="batch size for inference")
+    return parser.parse_args()
 
-# you can specify the revision tag if you don't want the timm dependency
-processor = DetrImageProcessor.from_pretrained("detr", revision="no_timm")
-model = DetrForObjectDetection.from_pretrained("detr", revision="no_timm").to("cuda")
-gpu_memory_model = torch.cuda.memory_allocated("cuda")
-logger.debug(f"load model done! model size: {gpu_memory_model/1024/1024:.2f}MB")
 
-# preprocess
-image_list = []
-for i in range(batch_size):
-    image_list.append(image)
+def main():
+    args = parse_args()
+    console.log(f"Profiling PyTorch-DETR with batchsize {args.batch_size}")
+    config = OmegaConf.load(args.config)
+    # console.log(f"model: {config.model}")
+    # console.log(f"data: {config.data}")
     
-inputs = processor(images=image_list, return_tensors="pt").to("cuda")
-gpu_memory_inputs = torch.cuda.memory_allocated("cuda") - gpu_memory_model
-logger.debug(f"preprocess done! data size: {gpu_memory_inputs/1024/1024:.2f}MB")
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    
+    if args.mode == "image":
+        
+        console.log("Inference on image")
+        image = Image.open(config.data.image_path)
+        images = []
+        for i in range(args.batch_size):
+            images.append(image)
+        
+        start = time.time()
+        processor = DetrImageProcessor.from_pretrained(config.model.model_path, revision="no_timm")
+        model = DetrForObjectDetection.from_pretrained(config.model.model_path, revision="no_timm").to(device)
+        end = time.time()
+        load_time = end - start
+        
+        start = time.time()
+        inputs = processor(images=images, return_tensors="pt").to(device)
+        end = time.time()
+        preprocess_time = end -start
+        
+        # warmup
+        with torch.no_grad():
+            for i in range(3):
+                outputs = model(**inputs)
+        
+        start = time.time()
+        with torch.no_grad():
+            for i in range(5):
+                outputs = model(**inputs)
+        
+        end = time.time()
+        infer_time = (end - start)/(5*args.batch_size)
+        
+        console.log(f"Load time: {load_time}s")
+        console.log(f"Preprocess time: {preprocess_time}s")
+        console.log(f"Inference time: {infer_time}s")
+        console.log(f"Throughput: {1/infer_time} images/s")
 
-# inference
-warm_up = 3
-for i in range(warm_up):
-    with torch.no_grad():
-        outputs = model(**inputs)
-
-start = time.time()
-for i in range(5):
-    with torch.no_grad():
-        outputs = model(**inputs)
-
-end = time.time()
-logger.debug(f"inference done! time cost: {(end-start)/5:.2f}s")
 ```
 
-> model size: `162.32` MB
-
-|Batch Size|1|4|8|16|
-|:---:|:---:|:---:|:---:|:---:|
-|Throughput (fps)|11.22|12.02|11.87|12.08|
+|Batch Size|1|4|8|
+|:---:|:---:|:---:|:---:|
+|Throughput (fps)|9.33|19.69|23.70|
 
 
 ### 2. Convert PyTorch model to TorchScript
