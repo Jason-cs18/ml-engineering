@@ -6,6 +6,8 @@ url: https://Jason-cs18.github.io/ml-engineering
 
 favicon_ico: "/assets/images/favicon.ico"
 
+latex: mathjax
+
 compress_html:
   blanklines: true
 
