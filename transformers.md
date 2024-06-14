@@ -22,9 +22,9 @@ Transformers are based on the self-attention mechanism. The self-attention mecha
 ### Self-attention mechanism
 
 <p float="left">
-  <img src="https://jalammar.github.io/images/t/self-attention-matrix-calculation-2.png" width="200" /> 
-  <img src="https://jalammar.github.io/images/t/self-attention-output.png" width="200" />
-  <img src="https://jalammar.github.io/images/t/transformer_self-attention_visualization_2.png" width="200" />
+  <img src="https://jalammar.github.io/images/t/self-attention-matrix-calculation-2.png" width="300" /> 
+  <img src="https://jalammar.github.io/images/t/self-attention-output.png" width="300" />
+  <img src="https://jalammar.github.io/images/t/transformer_self-attention_visualization_2.png" width="300" />
 </p>
 
 _image source: [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)_
