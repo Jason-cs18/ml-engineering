@@ -46,7 +46,7 @@ To preserve the accuracy of the deployed models, we often need to continuously u
 5. [SOSP'23] Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling​
 6. [ATC'23] EnvPipe: Performance-preserving DNN Training Framework for Saving Energy​
 7. [ATC'23] Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent​
-8. [MobiCom'23] AccuMO: Accuracy-Centric Multitask Offloading in Edge-Assisted Mobile Augmented Reality | Purdue University​
+8. [MobiCom'23] AccuMO: Accuracy-Centric Multitask Offloading in Edge-Assisted Mobile Augmented Reality, Purdue University​
 9. [EuroSys'23] Egeria: Efficient DNN Training with Knowledge-Guided Layer Freezing​
 10. [MOBICOM'23] Cost-effective On-device Continual Learning over Memory Hierarchy with Miro​
 11. [VLDB'23] RALF: Accuracy-Aware Scheduling for Feature Store Maintenance​
