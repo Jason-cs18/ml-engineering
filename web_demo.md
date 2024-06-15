@@ -21,28 +21,33 @@ After we got a demo script to run object detection model, we can build a simple 
 
 ```python
 # inference demo (object detection)
-def inference(image):
+import gradio as gr
+
+demo_image = "/mnt/data/production_template/DLTK/dlapp_template/scripts/web_app/temp/000560.png" # replace with your image path
+
+def inference(image): # connect to the backend
     # inference logic
     # tag results on image
-    return result_image
+    return demo_image
 
 demo = gr.Interface(
     fn = inference,
-    inputs = gr.inputs.Image(shape=(300, 300)),
-    outputs = gr.outputs.Image(shape=(300, 300)),
+    inputs = gr.Image(height=300),
+    outputs = gr.Image(height=300),
     title = "Object Detection Demo",
     description = "This is a simple web demo for object detection."
 )
 
-demo.launch()
+demo.launch(server_port=8333)
 ```
+![alt text](image-2.png)
 
 Although Gradio provides a lot of UI components, it does not support more customization. Thus, you'd better check Gradio UI components before using it.
 
 ## Building WebUI with Streamlit
 Unlike Gradio, [Streamlit](https://streamlit.io/) is a flexible tool/library to visualize data and build ML web applications. Its code is a little complex than Gradio, but it supports more customizations.
 
-You can check official demos [here](https://streamlit.io/components).
+You can check demos and examples on [best-of-streamlit](https://github.com/jrieke/best-of-streamlit).
 
 ## Conclusion
 In this blog, we have learned to build a simple webUI for the object detection model. Usually, Gradio provides more UI components and Streamlit supports more customization. Thus, we recommend using Gradio to build a simple webUI and Streamlit for more complex webUI.
