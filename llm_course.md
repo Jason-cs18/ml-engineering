@@ -10,6 +10,8 @@ To push the last mile of LLM deplyment, a lot of works focus on training and ser
 - [Table of contents](#table-of-contents)
 - [Background](#background)
   - [Transformer Math](#transformer-math)
+    - [Inference](#inference)
+    - [Training](#training)
 - [Survey](#survey)
 - [Efficient LLM Serving](#efficient-llm-serving)
   - [Serving LLMs over Heterogeneous Environment](#serving-llms-over-heterogeneous-environment)
@@ -23,6 +25,10 @@ To catch up the latest progress of efficient LLMs, I highly recommend [the intro
 
 ### Transformer Math
 Before we dive into the efficient LLMs, let's review some math behind transformers. It refers to two popular tech blogs ([Transformer Math 101](https://blog.eleuther.ai/transformer-math/) and [Transformer Inference Arithmetic](https://kipp.ly/transformer-inference-arithmetic/)).
+
+#### Inference
+
+#### Training
 
 
 ## Survey
