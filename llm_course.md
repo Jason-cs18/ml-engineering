@@ -84,5 +84,6 @@ The standard LLM training phrase contains three stages: pre-train, fine-tune, an
 ## Reference
 1. [Github Repo] [HetServe-LLMs: A Overview of Efficiently Serving Large Language Models across Edge Devices](https://github.com/Jason-cs18/HetServe-LLMs), New York University and Shandong University.
 2. [Github Repo] [Awesome LLM Systems Papers](https://github.com/AmberLJC/LLMSys-PaperList), University of Michigan.
-3. [ISCA 2024] [Splitwise: Efficient generative LLM inference using phase splitting](https://www.microsoft.com/en-us/research/publication/splitwise-efficient-generative-llm-inference-using-phase-splitting/), University of Washington.
+3. [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh
+4. [ISCA 2024] [Splitwise: Efficient generative LLM inference using phase splitting](https://www.microsoft.com/en-us/research/publication/splitwise-efficient-generative-llm-inference-using-phase-splitting/), University of Washington.
 
