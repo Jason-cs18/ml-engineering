@@ -86,4 +86,5 @@ The standard LLM training phrase contains three stages: pre-train, fine-tune, an
 2. [Github Repo] [Awesome LLM Systems Papers](https://github.com/AmberLJC/LLMSys-PaperList), University of Michigan.
 3. [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh
 4. [ISCA 2024] [Splitwise: Efficient generative LLM inference using phase splitting](https://www.microsoft.com/en-us/research/publication/splitwise-efficient-generative-llm-inference-using-phase-splitting/), University of Washington.
-
+5. [SIGCOMM 2024] [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](https://arxiv.org/abs/2310.07240), University of Chicago
+6. [arXiv 2024.05] [CacheBlend: Fast Large Language Model Serving with Cached Knowledge Fusion](https://arxiv.org/abs/2405.16444), University of Chicago
