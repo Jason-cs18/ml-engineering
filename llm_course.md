@@ -21,7 +21,7 @@ To push the last mile of LLM deplyment, a lot of works focus on training and ser
 - [Reference](#reference)
 
 ## Background
-To catch up the latest progress of efficient LLMs, I highly recommend [the introduction course (TinyML and Efficient Deep Learning Computing)](https://hanlab.mit.edu/courses/2023-fall-65940) from MIT Song Lab.
+To catch up the latest progress of efficient LLMs, I highly recommend [TinyML and Efficient Deep Learning Computing](https://hanlab.mit.edu/courses/2023-fall-65940) from MIT Song Lab and [AI-Systems (LLM Edition)](https://learning-systems.notion.site/AI-Systems-LLM-Edition-294-162-Fall-2023-661887583bd340fa851e6a8da8e29abb) from UC Berkeley.
 
 ### Transformer Math
 Before we dive into the efficient LLMs, let's review some math behind transformers. It refers to two popular tech blogs ([Transformer Math 101](https://blog.eleuther.ai/transformer-math/) and [Transformer Inference Arithmetic](https://kipp.ly/transformer-inference-arithmetic/)).
