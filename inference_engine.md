@@ -8,7 +8,7 @@ PyTorch provides a flexible and simple component for AI researchers and engineer
 
 To get a low-latency inference, we usually use inference engines, such as TorchScript, ONNX and TensorRT. They enable low-cost inference with graph optimization and optimized operaters.
 
-In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with TorchScript, ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. 
+In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. 
 
 
 ```
@@ -20,111 +20,90 @@ In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.c
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
-- [Use TorchScript](#use-torchscript)
-  - [1. Prepare PyTorch model](#1-prepare-pytorch-model)
-  - [2. Convert PyTorch model to TorchScript](#2-convert-pytorch-model-to-torchscript)
-  - [3. Test TorchScript model](#3-test-torchscript-model)
+- [Use PyTorch](#use-pytorch)
 - [Use ONNX](#use-onnx)
-  - [1. Prepare PyTorch model (skip)](#1-prepare-pytorch-model-skip)
-  - [2. Convert PyTorch model to TorchScript](#2-convert-pytorch-model-to-torchscript-1)
-  - [3. Test TorchScript model](#3-test-torchscript-model-1)
+  - [Export model to onnx](#export-model-to-onnx)
+  - [Inference with ONNX](#inference-with-onnx)
 - [Use TensorRT](#use-tensorrt)
-- [Use TVM](#use-tvm)
+- [Use TVM (TBD)](#use-tvm-tbd)
 - [Conclusion](#conclusion)
 - [References](#references)
 
-## Use TorchScript
+## Use PyTorch
+As presented in the [previous blog](https://jason-cs18.github.io/ml-engineering/model_selection.html), we can easily load and infer with transformers library. If you do not familiar with huggingface, you can refer to the [official tutorial](https://huggingface.co/docs/transformers/model_doc/detr).
 
-### 1. Prepare PyTorch model
+After measurement, the inference cost on 1 NVIDIA Tesla V100 is
+```markdown
+# batch-size = 1
+- Latency (ms): 79.2
+- GPU memory (MB): 187.7
+```
+
+## Use ONNX
+### Export model to onnx
+Prior to exporting, make sure you have download models from [Huggingface](https://huggingface.co/facebook/detr-resnet-50). Then, you can use the built-in tools to export the model to ONNX format.
+
+```bash
+optimum-cli export onnx --model /mnt/code/model_zoo/detr-resnet-50 /mnt/code/model_zoo/detr-resnet-50-onnx --task object-detection --device cuda
+```
+### Inference with ONNX
+After exporting, we can use the ONNX runtime to load model and infer. The latency is
+```markdown
+# batch-size = 1
+- Latency (ms): 30.84
+```
 ```python
-import time
-import argparse
+from time import time
 
-from rich.console import Console
-from omegaconf import OmegaConf
-
-from transformers import DetrImageProcessor, DetrForObjectDetection
 import torch
+import onnxruntime
 from PIL import Image
+from transformers import AutoImageProcessor, DetrForObjectDetection
+from rich.console import Console
 
 console = Console()
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="PyTorch Inference Script")
-    parser.add_argument("--config", type=str, default="/mnt/data/production_template/DLTK/dlapp_template/configs/infer_default.yaml", help="Path to config file")
-    parser.add_argument("--mode", type=str, default="image", help="test image or video")
-    parser.add_argument("--batch_size", type=int, default=1, help="batch size for inference")
-    return parser.parse_args()
+img_path = "../test_data/000000039769.jpg"
+model_path = "/mnt/code/model_zoo/detr-resnet-50-onnx"
+model_onnx_path = "/mnt/code/model_zoo/detr-resnet-50-onnx/model.onnx"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
+image = Image.open(img_path)
 
-def main():
-    args = parse_args()
-    console.log(f"Profiling PyTorch-DETR with batchsize {args.batch_size}")
-    config = OmegaConf.load(args.config)
-    # console.log(f"model: {config.model}")
-    # console.log(f"data: {config.data}")
+console.log("Load pre-trained DETR (ONNX)")
+image_processor = AutoImageProcessor.from_pretrained(model_path)
+
+session_options = onnxruntime.SessionOptions()
+providers = ["CPUExecutionProvider"]
+if device == 'cuda':
+    providers = ["CUDAExecutionProvider", "CPUExecutionProvider"]
     
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    
-    if args.mode == "image":
-        
-        console.log("Inference on image")
-        image = Image.open(config.data.image_path)
-        images = []
-        for i in range(args.batch_size):
-            images.append(image)
-        
-        start = time.time()
-        processor = DetrImageProcessor.from_pretrained(config.model.model_path, revision="no_timm")
-        model = DetrForObjectDetection.from_pretrained(config.model.model_path, revision="no_timm").to(device)
-        end = time.time()
-        load_time = end - start
-        
-        start = time.time()
-        inputs = processor(images=images, return_tensors="pt").to(device)
-        end = time.time()
-        preprocess_time = end -start
-        
-        # warmup
-        with torch.no_grad():
-            for i in range(3):
-                outputs = model(**inputs)
-        
-        start = time.time()
-        with torch.no_grad():
-            for i in range(5):
-                outputs = model(**inputs)
-        
-        end = time.time()
-        infer_time = (end - start)/(5*args.batch_size)
-        
-        console.log(f"Load time: {load_time}s")
-        console.log(f"Preprocess time: {preprocess_time}s")
-        console.log(f"Inference time: {infer_time}s")
-        console.log(f"Throughput: {1/infer_time} images/s")
+session = onnxruntime.InferenceSession(model_onnx_path, sess_options=session_options, providers=providers)	
 
+console.log("preprocessing")
+inputs = image_processor(images=image, return_tensors="pt")
+# print(inputs.data)
+
+console.log("inference")
+warmup_times = 2
+for i in range(warmup_times):
+    pred = session.run(None, {'pixel_values': inputs.data['pixel_values'].numpy()})
+
+measure_times = 5
+start = time()
+for i in range(measure_times):
+    pred = session.run(None, {'pixel_values': inputs.data['pixel_values'].numpy()})
+    
+end = time()
+console.log(f"Latency: {round((end - start) / measure_times * 1000, 2)} ms")
 ```
 
-|Batch Size|1|4|8|
-|:---:|:---:|:---:|:---:|
-|Throughput (fps)|9.33|19.69|23.70|
-
-
-### 2. Convert PyTorch model to TorchScript
-
-### 3. Test TorchScript model
-
-## Use ONNX
-
-### 1. Prepare PyTorch model (skip)
-
-### 2. Convert PyTorch model to TorchScript
-
-### 3. Test TorchScript model
-
 ## Use TensorRT
+<!-- Converting the ONNX model to TensorRT model is a little bit more complicated. Thus, we use the offical example of [mmdetection-to-tensorrt](https://github.com/grimoire/mmdetection-to-tensorrt). -->
 
-## Use TVM
+
+
+## Use TVM (TBD)
 
 ## Conclusion
 In this blog, we have learned to accelerate PyTorch models with different inference engines. Unlike PyTorch, ONNX and TensorRT are static graphs and can optimize the execution graph with performant operators and graph optimization. TVM is a flexible and efficient compiler framework. It can be used to optimize the execution graph with custom operators and graph optimization. But it also needs a lot of work to implement the operators and graph optimization.
