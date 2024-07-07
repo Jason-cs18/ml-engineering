@@ -9,7 +9,7 @@ ML engineering often refers to the process of building and maintaining machine l
 In my notes, we start from model selection, then model training, and finally model deployment.
 
 ## Quickstart
-1. [Choose a suitable model for your problem](https://jason-cs18.github.io/ml-engineering/model_selection.html)
+1. [Find a suitable model for your needs](https://jason-cs18.github.io/ml-engineering/model_selection.html)
 2. [Build a simple interactive web demo](https://jason-cs18.github.io/ml-engineering/web_demo.html)
 
 ## Dive into model training
