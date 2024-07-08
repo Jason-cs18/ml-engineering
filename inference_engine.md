@@ -8,7 +8,7 @@ PyTorch provides a flexible and simple component for AI researchers and engineer
 
 To get a low-latency inference, we usually use inference engines, such as TorchScript, ONNX and TensorRT. They enable low-cost inference with graph optimization and optimized operaters.
 
-In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. 
+In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. Full code examples are available in [DLTK](https://github.com/Jason-cs18/DLTK/tree/main/mlsys_template).
 
 
 ```
@@ -100,8 +100,58 @@ console.log(f"Latency: {round((end - start) / measure_times * 1000, 2)} ms")
 
 ## Use TensorRT
 <!-- Converting the ONNX model to TensorRT model is a little bit more complicated. Thus, we use the offical example of [mmdetection-to-tensorrt](https://github.com/grimoire/mmdetection-to-tensorrt). -->
+Installing TensorRT is a little bit complicated. It requires you install compatible CUDA, CUDNN and TensorRT. You can refer to the [HuggingFace guide](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/gpu#tensorrtexecutionprovider).
 
+The easiest way to use TensorRT is using `TensorrtExecutionProvider` in ONNX Runtime. You can implement this by simply adding 1 line code.
 
+```python
+from time import time
+
+import torch
+import onnxruntime
+from PIL import Image
+from transformers import AutoImageProcessor, DetrForObjectDetection
+from rich.console import Console
+
+console = Console()
+
+img_path = "../test_data/000000039769.jpg"
+model_path = "/mnt/code/model_zoo/detr-resnet-50-onnx"
+model_onnx_path = "/mnt/code/model_zoo/detr-resnet-50-onnx/model.onnx"
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+image = Image.open(img_path)
+
+console.log("Load pre-trained DETR (ONNX)")
+image_processor = AutoImageProcessor.from_pretrained(model_path)
+
+session_options = onnxruntime.SessionOptions()
+providers = ["CPUExecutionProvider"]
+if device == 'cuda':
+    # providers = ["CUDAExecutionProvider", "CPUExecutionProvider"]
+    providers = ["TensorrtExecutionProvider", "CUDAExecutionProvider", "CPUExecutionProvider"]
+
+session = onnxruntime.InferenceSession(model_onnx_path, sess_options=session_options, providers=providers)	
+
+console.log("preprocessing")
+inputs = image_processor(images=image, return_tensors="pt")
+# print(inputs.data)
+
+console.log("inference")
+warmup_times = 2
+for i in range(warmup_times):
+    pred = session.run(None, {'pixel_values': inputs.data['pixel_values'].numpy()})
+
+measure_times = 5
+start = time()
+for i in range(measure_times):
+    pred = session.run(None, {'pixel_values': inputs.data['pixel_values'].numpy()})
+    
+end = time()
+console.log(f"Latency: {round((end - start) / measure_times * 1000, 2)} ms")
+```
+
+The inference cost is 12.5 ms and is much faster than ONNX-GPU.
 
 ## Use TVM (TBD)
 
@@ -113,6 +163,6 @@ Thus, we recommend to use ONNX or TensorRT for inference acceleration on NVIDIA 
 ---
 
 ## References
-1. [torchscript-to-tvm](https://github.com/masahi/torchscript-to-tvm/blob/master/detr/detr_test.py)
-2. [OpenMMlab导出DETR模型并用onnxruntime推理](https://blog.csdn.net/taifyang/article/details/136127159)
-3. [OpenMMlab导出yolox模型并用onnxruntime和tensorrt推理](https://blog.csdn.net/taifyang/article/details/134368390)
+1. [DETR Tutorial](https://huggingface.co/docs/transformers/main/en/model_doc/detr)
+2. [Export to ONNX](https://huggingface.co/docs/transformers/serialization)
+3. [Accelerated inference on NVIDIA GPUs](https://huggingface.co/docs/optimum/onnxruntime/usage_guides/gpu)
