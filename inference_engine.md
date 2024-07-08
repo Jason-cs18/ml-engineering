@@ -4,11 +4,11 @@ layout: default
 parent: Engineer
 nav_order: 3
 ---
-PyTorch provides a flexible and simple component for AI researchers and engineers to build and train deep learning models. However, its dynamic nature makes it challenging to optimize in production. Thus, a native PyTorch model is slow and inefficient.
+PyTorch offers a flexible and straightforward component for AI researchers and engineers to construct and train deep learning models. Nevertheless, its dynamic nature poses challenges when it comes to optimization in production. As a result, a native PyTorch model is slow and inefficient.
+To achieve low-latency inference, we typically employ inference engines like TorchScript, ONNX, and TensorRT. These enable low-cost inference through graph optimization and optimized operators.
+In this blog, we will guide you in accelerating DETR-ResNet50 using ONNX and TensorRT engines. At the end, we will introduce a bit about TVM. Complete code examples can be found in [DLTK](https://github.com/Jason-cs18/DLTK/tree/main/mlsys_template).
 
-To get a low-latency inference, we usually use inference engines, such as TorchScript, ONNX and TensorRT. They enable low-cost inference with graph optimization and optimized operaters.
-
-In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. Full code examples are available in [DLTK](https://github.com/Jason-cs18/DLTK/tree/main/mlsys_template).
+<!-- In this blog, we will guide you accelerate [DETR-ResNet50](https://huggingface.co/facebook/detr-resnet-50) with ONNX and TensorRT engines. In the end, we will introduce a little bit about TVM. Full code examples are available in [DLTK](https://github.com/Jason-cs18/DLTK/tree/main/mlsys_template). -->
 
 
 ```
@@ -156,7 +156,7 @@ The inference cost is 12.5 ms and is much faster than ONNX-GPU.
 ## Use TVM (TBD)
 
 ## Conclusion
-In this blog, we have learned to accelerate PyTorch models with different inference engines. Unlike PyTorch, ONNX and TensorRT are static graphs and can optimize the execution graph with performant operators and graph optimization. TVM is a flexible and efficient compiler framework. It can be used to optimize the execution graph with custom operators and graph optimization. But it also needs a lot of work to implement the operators and graph optimization.
+In this blog, we have learned to accelerate PyTorch models with advanced inference engines. Unlike PyTorch, ONNX and TensorRT are static graphs and can optimize the execution graph with performant operators and graph optimization. TVM is a flexible and efficient compiler framework. It can be used to optimize the execution graph with custom operators and graph optimization. But it also needs a lot of work to implement the operators and graph optimization.
 
 Thus, we recommend to use ONNX or TensorRT for inference acceleration on NVIDIA GPUs.
 
