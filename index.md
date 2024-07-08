@@ -27,6 +27,7 @@ In the blog, I categorize my notes on the following topics:
 - [Research Advances on Sustainable AI](https://jason-cs18.github.io/ml-engineering/sustainable_ai.html)
   - [ ] [Continuous Learning (adapt to new data)](https://jason-cs18.github.io/ml-engineering/cl_research.html)
   - [ ] [Efficient Learning/Transfer (cost-effective adaptation)](https://jason-cs18.github.io/ml-engineering/efficientml.html)
+  - [ ] [Data-centric AI (weak/semi-supervised learning)](https://jason-cs18.github.io/ml-engineering/data_centric_ai.html)
 - [LLM Systems](https://jason-cs18.github.io/ml-engineering/llm.html)
   - [ ] [Medical LLMs](https://jason-cs18.github.io/ml-engineering/medical_llm.html)
   - [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
