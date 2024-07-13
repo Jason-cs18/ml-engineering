@@ -4,7 +4,9 @@ layout: default
 parent: Engineer
 nav_order: 7
 ---
-_open sentence_
+To make sure our code is running as expected, we need to monitor the time and memory usage of our Python scripts, monitor the GPU usage, and monitor the performance of our PyTorch scripts.
+
+In this blog, we will learn how to profile Python scripts, monitor GPU usage, use PyTorch Profiler to profile PyTorch scripts, monitor DETR with Ray Dashboard, and add accuracy metrics to Ray Dashboard.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
@@ -48,6 +50,9 @@ if __name__ == "__main__":
     main()
 ```
 
+![alt text](image-7.png)
+
+![alt text](image-6.png)
 
 
 ## Monitor GPU with nvitop
@@ -55,6 +60,7 @@ if __name__ == "__main__":
 pip install -U nvitop
 nvitop # start monitoring
 ```
+![alt text](image-8.png)
 
 ## Use PyTorch Profiler to profile PyTorch scripts
 
