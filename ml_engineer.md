@@ -8,6 +8,11 @@ ML engineering often refers to the process of building and maintaining machine l
 
 In my notes, we start from model selection, then model training, and finally model deployment.
 
+## ML application development
+Today, building a simple ML application is easy and could be implemented within 100-lines code. It is because a lot of frameworks/tools abstract the complex development logic and provide APIs for users. Thus, understanding these tools is important to ML developers. The above image shows an standard ML application development stack. In other blogs, I will present how to use these tools to build a simple object detection application.
+
+![alt text](image-5.png)
+
 ## Quickstart
 1. [Find a suitable model for your needs](https://jason-cs18.github.io/ml-engineering/model_selection.html)
 2. [Build a simple interactive web demo](https://jason-cs18.github.io/ml-engineering/web_demo.html)
