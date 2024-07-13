@@ -24,6 +24,7 @@ Today, building a simple ML application is easy and could be implemented within 
 ## Let's make models fast
 1. [Accelerate PyTorch Models with ONNX and TensorRT](https://jason-cs18.github.io/ml-engineering/inference_engine.html)
 2. [Serve a model with Ray Serve and NVIDIA Triton](https://jason-cs18.github.io/ml-engineering/inference_server.html)
+3. [Fast inference for LLMs and Stable Diffusion](https://jason-cs18.github.io/ml-engineering/fast_aigc.html)
 
 ## Monitor and debug deployed models
 1. [Using Ray Dashboard to monitor and debug models](https://jason-cs18.github.io/ml-engineering/monitor.html)
