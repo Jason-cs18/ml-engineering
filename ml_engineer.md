@@ -32,3 +32,4 @@ Today, building a simple ML application is easy and could be implemented within 
 ## Engineering Tools
 1. [Build a simple web backend with FastAPI](https://jason-cs18.github.io/ml-engineering/fastapi.html)
 2. [Manage your AI services with docker and docker-compose](https://jason-cs18.github.io/ml-engineering/docker.html)
+3. [Automate your ML workflow with Makefile](https://jason-cs18.github.io/ml-engineering/tools.html)
