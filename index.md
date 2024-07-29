@@ -20,6 +20,8 @@ In the blog, I categorize my notes on the following topics:
   - [ ] [Monitor, Debug, Log, Test](https://jason-cs18.github.io/ml-engineering/monitor.html) 
   - [ ] [Generative AI (LLM, MLLM, Diffusion)](https://jason-cs18.github.io/ml-engineering/generative_ai.html)
   - [ ] [CUDA Programming (LLM optimizations)](https://jason-cs18.github.io/ml-engineering/cuda.html)
+  - [ ] [Automation (Makefile and PyInstaller)](https://jason-cs18.github.io/ml-engineering/tools.html)
+  - [ ] [Inference Microservices (ONNX+FastAPI+Docker)](https://jason-cs18.github.io/ml-engineering/ai_service.html)
 - [Deep Learning Basics (models and training)](https://jason-cs18.github.io/ml-engineering/dl_basics.html)
   - [ ] [Transformers in NLP and Vision](https://jason-cs18.github.io/ml-engineering/transformers.html)
   - [ ] [CLIP and Its Variants](https://jason-cs18.github.io/ml-engineering/clip.html)
@@ -31,6 +33,7 @@ In the blog, I categorize my notes on the following topics:
 - [LLM Systems](https://jason-cs18.github.io/ml-engineering/llm.html)
   - [ ] [Medical LLMs](https://jason-cs18.github.io/ml-engineering/medical_llm.html)
   - [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
+- [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html)
   
 
 Most code of this blog is available on [DLTK](https://github.com/Jason-cs18/DLTK).
