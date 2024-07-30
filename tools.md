@@ -102,7 +102,7 @@ dist/
     ├── hello_world
     └── _internal
 ```
-Now, we can run `hello_world` app on any Linux platforms.
+Now, we can run `hello_world` app on any Linux and macOS devices.
 
 ```bash
 ./hello_world
