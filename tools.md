@@ -13,7 +13,7 @@ In Python projects, a considerable number of executable files exist that we are 
 - [Package](#package)
 	- [Installation](#installation)
 	- [Packaging a single file](#packaging-a-single-file)
-	- [Packaging multiple files (TBD)](#packaging-multiple-files-tbd)
+	- [Packaging multiple files](#packaging-multiple-files)
 - [Conclusion](#conclusion)
 - [Continue reading](#continue-reading)
 
@@ -79,16 +79,17 @@ Let us package a single Python script (`hello_world.py`).
 @Author: Yan Lu
 @Date: 2024/07/30
 '''
-from rich.console import Console
+import uvicorn
+from fastapi import FastAPI
 
-console = Console()
+app = FastAPI()
 
-def main():
-    console.log("Hello World!")
-
+@app.get("/")
+def root():
+    return {"hello": "world"}
 
 if __name__ == '__main__':
-    main()
+    uvicorn.run(app, host="127.0.0.1", port=58000, reload=False)
 ```
 After writing the script, we can package it using the following command:
 ```bash
@@ -102,16 +103,136 @@ dist/
     ├── hello_world
     └── _internal
 ```
-Now, we can run `hello_world` app on any Linux and macOS devices.
+Now, we can simply run `hello_world` app on any Linux and macOS devices.
 
 ```bash
-./hello_world
+./dist/hello_world/hello_world
 
 # output
-[16:59:39] Hello World!                                                  hello_world.py:12
+INFO:     Started server process [3669391]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:58000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:58656 - "GET / HTTP/1.1" 200 OK
 ```
 
-### Packaging multiple files (TBD)
+### Packaging multiple files
+In Python projects, we often need to package multiple Python files into a single executable file. Let us take a simple image classification project as an example. We have a `main.py` file that imports functions from `model.py` and starts a FastAPI server.
+
+```bash
+# File structure
+.
+├── config.yaml
+├── image.jpg
+├── main.py
+├── model.py
+└── resnet50 # model weights
+```
+
+```yaml
+# config.yaml
+host: 127.0.0.1
+port: 5000
+model_name: resnet50
+task: image classification
+model_path: /home/jason/Code/package/huggingface/resnet50
+```
+
+```python
+'''
+@Project: Package Demo
+@File: model.py
+@Author: Yan Lu
+@Date: 2024/07/30
+'''
+import torch
+from transformers import AutoImageProcessor, ResNetForImageClassification
+
+class Classifier:
+    """Classifier model"""
+    def __init__(self, model_path, device="cuda:0"):
+        self.device = device
+        self.processor = AutoImageProcessor.from_pretrained(model_path)
+        self.model = ResNetForImageClassification.from_pretrained(model_path)
+        self.model = self.model.to(device)
+        
+    def predict(self, x):
+        inputs = self.processor(x, return_tensors="pt")
+        inputs = inputs.to(self.device)
+        with torch.no_grad():
+            logits = self.model(**inputs).logits
+        
+        del inputs
+        torch.cuda.empty_cache()
+        predicted_label = logits.argmax(-1).item()
+        
+        return self.model.config.id2label[predicted_label]
+```
+
+```python
+'''
+@Project: Package Demo
+@File: main.py
+@Author: Yan Lu
+@Date: 2024/07/30
+'''
+import sys
+
+sys.setrecursionlimit(100000) # important param for pyinstaller
+
+import uvicorn
+from PIL import Image 
+from omegaconf import OmegaConf
+from fastapi import FastAPI, File, UploadFile
+
+from model import Classifier
+
+app = FastAPI()
+
+config = OmegaConf.load("config.yaml")
+
+model = Classifier(config.model_path)
+
+@app.get("/")
+def root():
+    return "欢迎使用图片分类服务！"
+
+
+@app.post("/predict")
+async def predict(file: UploadFile = File(...)):
+    filename = "test.jpg"
+    try:
+        res = await file.read()
+        with open(filename, "wb") as f:
+            f.write(res)
+    except Exception as e:
+        print("invalid file!")
+    
+    image = Image.open(filename)
+    result = model.predict(image)
+    return result
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, host=config.host, port=config.port, reload=False)
+```
+
+Use the following command to package the project:
+```bash
+pyinstaller --onefile main.py
+
+# if you meet "A RecursionError (maximum recursion depth exceeded) occurred", please follow the instructions below:
+# 1. add this line near the top:: to your program's spec file
+# import sys ; sys.setrecursionlimit(sys.getrecursionlimit() * 5)
+# 2. build your program by running PyInstaller with .spec file 
+# pyinstaller myprog.spec
+```
+Like the previous example, we can simply run the application via
+```bash
+./dist/hello_world/hello_world
+
+# outputs
+```
 
 ## Conclusion
 In this note, we have learned how to use Makefile to automate the execution of Python scripts and how to package a Python project using `pyinstaller`. These tools are essential for managing and deploying Python projects efficiently.
