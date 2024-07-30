@@ -11,6 +11,11 @@ In Python projects, a considerable number of executable files exist that we are 
 - [Table of contents](#table-of-contents)
 - [Makefile](#makefile)
 - [Package](#package)
+	- [Installation](#installation)
+	- [Packaging a single file](#packaging-a-single-file)
+	- [Packaging multiple files](#packaging-multiple-files)
+- [Conclusion](#conclusion)
+- [Continue reading](#continue-reading)
 
 ## Makefile
 Makefile is a file that encompasses a collection of instructions intended for the make program. It serves the purpose of automating the procedure related to compiling and linking programs. In the aforementioned example, we leverage Makefile to mechanize the processes of installing dependencies, inspecting logs, and running news_scraper.py.
@@ -58,5 +63,59 @@ run:
 After creating the Makefile, we can run the commands by typing `make <command>` in the terminal. For instance, to run news_scraper.py in the background, we can type `make run`.
 
 ## Package
-In Python, a popular way to package a project is to use the `pyinstaller` tool. It is a standalone package that can be used to package a Python project into a single executable file.
-- [PyInstaller Manual](https://pyinstaller.org/en/stable/)
+In Python, a common way to package a project is to use the `pyinstaller` tool. It is a standalone package that can be used to package a Python project into a single executable file.
+
+### Installation
+```bash
+pip install -U pyinstaller
+```
+
+### Packaging a single file
+Let us package a single Python script (`hello_world.py`).
+```python
+'''
+@Project: Package Demo
+@File: hello_world.py
+@Author: Yan Lu
+@Date: 2024/07/30
+'''
+from rich.console import Console
+
+console = Console()
+
+def main():
+    console.log("Hello World!")
+
+
+if __name__ == '__main__':
+    main()
+```
+After writing the script, we can package it using the following command:
+```bash
+pyinstaller hello_world.py
+```
+This will generate a `dist` folder containing the executable file (`hello_world.exe` on Windows, `hello_world` on Linux and macOS).
+
+```bash
+dist/
+└── hello_world
+    ├── hello_world
+    └── _internal
+```
+Now, we can run `hello_world` app on any Linux platforms.
+
+```bash
+./hello_world
+
+# output
+[16:59:39] Hello World!                                                  hello_world.py:12
+```
+
+### Packaging multiple files
+
+## Conclusion
+In this note, we have learned how to use Makefile to automate the execution of Python scripts and how to package a Python project using `pyinstaller`. These tools are essential for managing and deploying Python projects efficiently.
+
+## Continue reading
+- [Makefiles in python projects](https://krzysztofzuraw.com/blog/2016/makefiles-in-python-projects/)
+- [PyInstaller Manual](https://pyinstaller.org/en/stable/)	
