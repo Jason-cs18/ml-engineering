@@ -219,7 +219,7 @@ if __name__ == '__main__':
 
 Use the following command to package the project:
 ```bash
-pyinstaller --onefile main.py
+pyinstaller main.py
 
 # if you meet "A RecursionError (maximum recursion depth exceeded) occurred", please follow the instructions below:
 # 1. add this line near the top:: to your program's spec file
@@ -232,6 +232,14 @@ Like the previous example, we can simply run the application via
 ./dist/hello_world/hello_world
 
 # outputs
+INFO:     Started server process [3951422]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:33254 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33262 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33262 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42574 - "POST /predict HTTP/1.1" 200 OK
 ```
 
 ## Conclusion
