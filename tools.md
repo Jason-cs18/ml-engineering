@@ -13,7 +13,7 @@ In Python projects, a considerable number of executable files exist that we are 
 - [Package](#package)
 	- [Installation](#installation)
 	- [Packaging a single file](#packaging-a-single-file)
-	- [Packaging multiple files](#packaging-multiple-files)
+	- [Packaging multiple files (TBD)](#packaging-multiple-files-tbd)
 - [Conclusion](#conclusion)
 - [Continue reading](#continue-reading)
 
@@ -111,7 +111,7 @@ Now, we can run `hello_world` app on any Linux and macOS devices.
 [16:59:39] Hello World!                                                  hello_world.py:12
 ```
 
-### Packaging multiple files
+### Packaging multiple files (TBD)
 
 ## Conclusion
 In this note, we have learned how to use Makefile to automate the execution of Python scripts and how to package a Python project using `pyinstaller`. These tools are essential for managing and deploying Python projects efficiently.
