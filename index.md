@@ -6,7 +6,7 @@ nav_order: 1
 
 Hi, this is Yan Lu. I'm documenting my learning notes in this blog. Besides, I'm a system researcher on sustainable AI systems at New York University. 
 
-In the blog, I categorize my notes on the following topics:
+I categorize my notes on the following topics:
 
 - [Machine Learning Engineering (workflow)](https://jason-cs18.github.io/ml-engineering/ml_engineer.html)
   - [x] [Model Selection (a quick demo)](https://jason-cs18.github.io/ml-engineering/model_selection.html)
