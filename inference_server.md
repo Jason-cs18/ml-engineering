@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 In the previous [blog](https://jason-cs18.github.io/ml-engineering/inference_engine.html), we discussed how to achieve low-latency inference using inference engines. However, in practical scenarios, we often need to handle concurrency and enhance the throughput of ML services.
-In this blog, we will guide you on how to deploy the pre-trained or optimized model on a high-throughput inference server. Full code can be found in [here](https://github.com/Jason-cs18/DLTK). 
+In this blog, we will guide you on how to deploy the pre-trained or optimized model on a high-throughput inference server. Full code can be found in [here](https://github.com/Jason-cs18/DLTK/tree/main/mlsys_template/inference). 
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
@@ -25,7 +25,7 @@ Before [Ray Serve](https://docs.ray.io/en/latest/serve/index.html), there were t
 _image source: [Serving ML Models in Production: Common Patterns](https://www.anyscale.com/blog/serving-ml-models-in-production-common-patterns)_
 
 Besides Ray Serve, there are other popular inference servers, such as 
-[NVIDIA Triton](https://github.com/triton-inference-server/triton-inference-server). However, we choose Ray Serve because it is easy to use and integrate with other frameworks.
+[NVIDIA Triton](https://github.com/triton-inference-server/triton-inference-server). However, their configuations are more complicated and require more human effort to tune the performance.
 
 ## Deploy DETR on Ray Serve
 In this section, we deploy the DETR model from Huggingface on Ray Serve. The implement logic is simple and can be easily extended to other models.
