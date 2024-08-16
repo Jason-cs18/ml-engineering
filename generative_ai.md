@@ -9,6 +9,5 @@ Generative AI brings about a paradigm shift in how we interact with computers an
 In this note, we will review milestone generative AI models and dive into their optimization techniques.
 
 ## References
-1. [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh.
-2. [TMLR 2024] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University.
-3. [Tutorial] [Effective and efficient diffusion](https://huggingface.co/docs/diffusers/stable_diffusion), Hugging Face.
+- [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh.
+

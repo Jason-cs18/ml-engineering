@@ -35,7 +35,7 @@ I categorize my notes on the following topics:
 - [LLM Systems](https://jason-cs18.github.io/ml-engineering/llm.html)
   - [ ] [Medical LLMs](https://jason-cs18.github.io/ml-engineering/medical_llm.html)
   - [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
-- [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html)
+<!-- - [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html) -->
   
 
 Most code of this blog is available on [DLTK](https://github.com/Jason-cs18/DLTK).

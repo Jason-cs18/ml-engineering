@@ -14,3 +14,5 @@ On this section, we summarize the recent progress in efficient LLMs and stable d
 ## Conclusion
 
 ## References
+- [TMLR 2024] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University.
+- [Tutorial] [Effective and efficient diffusion](https://huggingface.co/docs/diffusers/stable_diffusion), Hugging Face.
