@@ -15,7 +15,7 @@ I categorize my notes on the following topics:
   - [x] [Use Docker to deliever ML services](https://jason-cs18.github.io/ml-engineering/docker.html)
   - [x] [Web scrapper (dataset curation)](https://jason-cs18.github.io/ml-engineering/web_scraper.html)
   - [x] [Inference Engine (low-latency)](https://jason-cs18.github.io/ml-engineering/inference_engine.html)
-  - [ ] [Inference Server (high-throughput and resource management)](https://jason-cs18.github.io/ml-engineering/inference_server.html)
+  - [x] [Inference Server (high-throughput and resource management)](https://jason-cs18.github.io/ml-engineering/inference_server.html)
   - [ ] [Scalable Training Pipeline (distributed training)](https://jason-cs18.github.io/ml-engineering/detr_train.html)
   - [ ] [Hyperparameter Optimization (tuning)](https://jason-cs18.github.io/ml-engineering/detr_tune.html)
   - [ ] [Monitor, Debug, Log, Test](https://jason-cs18.github.io/ml-engineering/monitor.html) 
