@@ -27,10 +27,12 @@ Although PyTorch has provided efficient CUDA implementations for most operations
 
 ### C++ review
 - [Effective Programming In C And C++](https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/pages/lecture-notes/)
+
 ### CUDA short courses
 - [TinyEngine and Parallel Processing](https://www.youtube.com/watch?app=desktop&v=gGcbn0ISOJM)
 - [Parallel Computing Tutorial](https://github.com/mit-han-lab/parallel-computing-tutorial)
 - [6.5940 Fall 2023 Lab 5: Optimize LLM on Edge Devices](https://docs.google.com/document/u/0/d/13IaTfPKjp0KiSBEhPdX9IxgXMIAZfiFjor37OWQJhMM/mobilebasic)
+
 ### Dive into CUDA
 - [Github Repo] [CUDA-Mode lectures](https://github.com/cuda-mode/lectures)
 - [Github Repo] [awesomeMLSys](https://github.com/cuda-mode/awesomeMLSys)
