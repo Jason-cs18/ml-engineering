@@ -20,6 +20,7 @@ I categorize my notes on the following topics:
   - [ ] [Hyperparameter Optimization (tuning)](https://jason-cs18.github.io/ml-engineering/detr_tune.html)
   - [ ] [Monitor, Debug, Log, Test](https://jason-cs18.github.io/ml-engineering/monitor.html) 
   - [ ] [Generative AI (LLM, MLLM, Diffusion)](https://jason-cs18.github.io/ml-engineering/generative_ai.html)
+  - [ ] [Fast Generative Models (deep compression)](https://jason-cs18.github.io/ml-engineering/fast_aigc.html)
   - [ ] [CUDA Programming (LLM optimizations)](https://jason-cs18.github.io/ml-engineering/cuda.html)
   - [x] [Automation (Makefile and PyInstaller)](https://jason-cs18.github.io/ml-engineering/tools.html)
   - [ ] [Inference Microservices (ONNX+FastAPI+Docker)](https://jason-cs18.github.io/ml-engineering/ai_service.html)

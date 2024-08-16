@@ -6,13 +6,36 @@ nav_order: 9
 ---
 Docker in production ensures consistent, scalable, and secure application deployments, improving reliability, developer productivity, and operational efficiency through containerization, resource optimization, and simplified deployment and rollback processes. Thus, we take a look at how to use docker to deploy and manage AI services.
 
+![alt text](image-9.png)
+
 ## Table of contents
 - [Table of contents](#table-of-contents)
+- [Best practice](#best-practice)
+  - [A single service](#a-single-service)
+  - [Multiple services](#multiple-services)
 - [Build a docker image for your AI services](#build-a-docker-image-for-your-ai-services)
 - [Run a docker container with local codebase](#run-a-docker-container-with-local-codebase)
 - [Use docker-compose to run/manage multiple AI services](#use-docker-compose-to-runmanage-multiple-ai-services)
 - [Conclusion](#conclusion)
 - [References](#references)
+
+## Best practice
+Docker not only supports a single service but also multi-service deployment. Here are some best practices:
+
+### A single service
+
+1. Write a simple Dockerfile to container your runtime environment (OS, Python, CUDA, requirements.txt, etc).
+2. Build a docker image with the Dockerfile.
+3. Run a docker container with the docker image.
+
+### Multiple services
+
+1. Write a docker-compose.yml to manage multiple services.
+2. Write a Dockerfile for each service.
+3. Build docker images for each service.
+4. Run docker containers with docker-compose.
+
+> Note: If you target to deliever your service, please copy codebase and model checkpoints to your Dockerfile. If you aim to share your environment, please use mount volumes to load your codebase and model checkpoints in runtime.
 
 ## Build a docker image for your AI services
 ```Dockerfile
@@ -79,6 +102,8 @@ Second, run the following command to start/stop all services.
 ```bash
 docker-compose up # start all services
 docker-compose up -d # start all services in background
+docker-compose start service1 # start service1
+docker-compose restart service1 # restart service1
 docker-compose logs -f service1 # check logs of service1
 docker-compose down # stop all services
 ```
