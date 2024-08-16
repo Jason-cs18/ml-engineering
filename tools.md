@@ -11,9 +11,9 @@ In Python projects, a considerable number of executable files exist that we are 
 - [Table of contents](#table-of-contents)
 - [Makefile](#makefile)
 - [Package](#package)
-	- [Installation](#installation)
-	- [Packaging a single file](#packaging-a-single-file)
-	- [Packaging multiple files](#packaging-multiple-files)
+  - [Installation](#installation)
+  - [Packaging a single file](#packaging-a-single-file)
+  - [Packaging multiple files](#packaging-multiple-files)
 - [Conclusion](#conclusion)
 - [Continue reading](#continue-reading)
 
@@ -36,7 +36,7 @@ help:
 	@echo "make delete: detele existing_urls.npy"
 	@echo "make find: find pid of the running process with output.log"
 	@echo "make check: print the log of the last run"
-	@echo "make run: run news_scraper.py in background mode"
+	@echo "make run: run news_scraper.py in background mode (params: web_url)"
 
 activate:
 	($(CONDA_ACTIVATE) /mnt/data/envs/avatar_demo ; python -c "import numpy as np; print(np.__version__)")
@@ -57,10 +57,10 @@ check:
 	cat output.log
 
 run:
-	($(CONDA_ACTIVATE) /mnt/data/envs/avatar_demo; nohup python -W ignore news_scraper.py > output.log &)
+	($(CONDA_ACTIVATE) /mnt/data/envs/avatar_demo; nohup python -W ignore news_scraper.py --web_url ${web_url} > output.log &)
 ```
 
-After creating the Makefile, we can run the commands by typing `make <command>` in the terminal. For instance, to run news_scraper.py in the background, we can type `make run`.
+After creating the Makefile, we can run the commands by typing `make <command>` in the terminal. For instance, to run news_scraper.py in the background, we can type `make run web_url="www.baidu.com"`.
 
 ## Package
 In Python, a common way to package a project is to use the `pyinstaller` tool. It is a standalone package that can be used to package a Python project into a single executable file.
