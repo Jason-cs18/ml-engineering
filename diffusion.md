@@ -13,7 +13,6 @@ In this blog, we will introduce the diffusion model and its variants, which have
 - [Table of contents](#table-of-contents)
 - [Image Synthesis](#image-synthesis)
 - [Video Synthesis](#video-synthesis)
-- [Text to 3D](#text-to-3d)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -21,16 +20,6 @@ In this blog, we will introduce the diffusion model and its variants, which have
 
 
 ## Video Synthesis
-
-
-## Text to 3D
-Although 2D synthesis has gained significant progress, the view consistency still remains a challenge. To bridge this gap, some works have proposed to generate 3D objects from text descriptions directly.
-
-Usually, 3D synthesis is a challenging task due to
-
-- Limited high quality 3D training data
-- Hard to align different modal in 3D space
-
 
 
 ## Conclusion
@@ -46,7 +35,3 @@ Usually, 3D synthesis is a challenging task due to
 6. [arXiv 2023.11] [Stable Video Diffusion](https://static1.squarespace.com/static/6213c340453c3f502425776e/t/655ce779b9d47d342a93c890/1700587395994/stable_video_diffusion.pdf), Stability AI
 7. [arXiv 2024.03] [Fast High-Resolution Image Synthesis with Latent Adversarial Diffusion Distillation](https://arxiv.org/abs/2403.12015), Stability AI
 8. [ICCV'23] [Scalable Diffusion Models with Transformers](https://arxiv.org/abs/2212.09748), UC Berkeley
-9. [arXiv 2023.11] [RichDreamer: A Generalizable Normal-Depth Diffusion Model for Detail Richness in Text-to-3D](https://github.com/modelscope/richdreamer), Alibaba
-10. [arXiv 2024.03] [DreamReward: Text-to-3D Generation with Human Preference](https://arxiv.org/abs/2403.14613), Tsinghua University
-11. [CVPR'24 Highlight] [HumanGaussian: Text-Driven 3D Human Generation with Gaussian Splatting](https://github.com/alvinliu0/HumanGaussian?tab=readme-ov-file), The Chinese University of Hong Kong
-12. [NeurIPS'23] [DreamHuman: Animatable 3D Avatars from Text](https://openreview.net/pdf?id=rheCTpRrxI), Google Research

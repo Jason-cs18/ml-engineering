@@ -2,7 +2,7 @@
 title: Efficient Learning and Transfer
 layout: default
 parent: Sustainable AI
-nav_order: 3
+nav_order: 2
 ---
 
 To conduct continuous learning on resource-constrainted devices, efficient learning/transfer algorithms are needed. In this page, we summarize recent representative works and discuss their limitations.

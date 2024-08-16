@@ -1,8 +1,8 @@
 ---
-title: Efficient LLMs
+title: Efficient LLMSys
 layout: default
-parent: LLM Systems
-nav_order: 2
+nav_order: 5
+has_children: true
 ---
 To push the last mile of LLM deplyment, a lot of works focus on training and serving LLMs within low cost. In this blog, we summarize the most important works in efficient LLMs.
 
@@ -84,7 +84,6 @@ The standard LLM training phrase contains three stages: pre-train, fine-tune, an
 ## Reference
 1. [Github Repo] [HetServe-LLMs: A Overview of Efficiently Serving Large Language Models across Edge Devices](https://github.com/Jason-cs18/HetServe-LLMs), New York University and Shandong University.
 2. [Github Repo] [Awesome LLM Systems Papers](https://github.com/AmberLJC/LLMSys-PaperList), University of Michigan.
-3. [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh
-4. [ISCA 2024] [Splitwise: Efficient generative LLM inference using phase splitting](https://www.microsoft.com/en-us/research/publication/splitwise-efficient-generative-llm-inference-using-phase-splitting/), University of Washington.
-5. [SIGCOMM 2024] [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](https://arxiv.org/abs/2310.07240), University of Chicago
-6. [arXiv 2024.05] [CacheBlend: Fast Large Language Model Serving with Cached Knowledge Fusion](https://arxiv.org/abs/2405.16444), University of Chicago
+3. [ISCA 2024] [Splitwise: Efficient generative LLM inference using phase splitting](https://www.microsoft.com/en-us/research/publication/splitwise-efficient-generative-llm-inference-using-phase-splitting/), University of Washington.
+4. [SIGCOMM 2024] [CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving](https://arxiv.org/abs/2310.07240), University of Chicago
+5. [arXiv 2024.05] [CacheBlend: Fast Large Language Model Serving with Cached Knowledge Fusion](https://arxiv.org/abs/2405.16444), University of Chicago
