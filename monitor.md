@@ -14,7 +14,6 @@ In this blog, we will learn how to profile Python scripts, monitor GPU usage, us
 - [Monitor GPU with nvitop](#monitor-gpu-with-nvitop)
 - [Use PyTorch Profiler to profile PyTorch scripts](#use-pytorch-profiler-to-profile-pytorch-scripts)
 - [Monitor DETR with Ray Dashboard](#monitor-detr-with-ray-dashboard)
-  - [Add accuracy metrics to Ray Dashboard](#add-accuracy-metrics-to-ray-dashboard)
 - [Conclusion](#conclusion)
 
 ## Profile time & memory for Python scripts
@@ -63,12 +62,21 @@ nvitop # start monitoring
 ![alt text](image-8.png)
 
 ## Use PyTorch Profiler to profile PyTorch scripts
+Usually, nvitop only provides a coarse-level view of GPU usage, and we need to use [PyTorch Profiler](https://pytorch.org/tutorials/recipes/recipes/profiler.html) to get more detailed information. For example, we can find the most time-consuming operators in PyTorch Profiler logs and visualize the GPU utilization on each operators.
+
+- [系统调优助手，PyTorch Profiler TensorBoard 插件教程](https://blog.csdn.net/just_sort/article/details/137784877)
+- [PyTorch Profiler With TensorBoard](https://pytorch.org/tutorials/intermediate/tensorboard_profiler_tutorial.html)
+- [Visualizing Models, Data, and Training with TensorBoard](https://pytorch.org/tutorials/intermediate/tensorboard_tutorial.html)
 
 ## Monitor DETR with Ray Dashboard
+Besides monitoring the time and memory usage of a single Pytorch model, we also need to monitor and debug all running AI jobs. To this end, we use Ray Dashboard to check running logs and analyze hardware utilization.
 
-### Add accuracy metrics to Ray Dashboard
+![alt text](image-10.png)
+
+- [Ray Dashboard](https://docs.ray.io/en/latest/ray-observability/getting-started.html#ray-dashboard)
+
+<!-- ### Add accuracy metrics to Ray Dashboard -->
+
 
 ## Conclusion
-In this blog, we have learned ...
-
-We recommend ...
+In this blog, we have learned to profile simple python scripts and Pytorch models. In the end, we studied to monitor AI applications or jobs through Ray Dashboard.
