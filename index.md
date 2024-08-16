@@ -30,7 +30,7 @@ I categorize my notes on the following topics:
   - [ ] [Diffusion and Its Variants](https://jason-cs18.github.io/ml-engineering/diffusion.html)
 - [Research Advances on Sustainable AI](https://jason-cs18.github.io/ml-engineering/sustainable_ai.html)
   - [ ] [Continuous Learning (adapt to new data)](https://jason-cs18.github.io/ml-engineering/cl_research.html)
-  - [ ] [Efficient Learning/Transfer (cost-effective adaptation)](https://jason-cs18.github.io/ml-engineering/efficientml.html)
+  - [ ] [Efficient Learning and Transfer (cost-effective adaptation)](https://jason-cs18.github.io/ml-engineering/efficientml.html)
 - [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
 <!-- - [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html) -->
   
