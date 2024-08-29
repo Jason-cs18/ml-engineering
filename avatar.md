@@ -25,7 +25,7 @@ Avatar has been a popular topic in AIGC and enpower a lot of real-world applicat
   
   MM 2020. [[<ins>Paper</ins>](http://arxiv.org/abs/2008.10010)] [[<ins>Code</ins>](https://github.com/Rudrabha/Wav2Lip)]
   
-  _Pre-train a lip-sync expert and use it make GAN generate more lip-sync videos. However, the output shape is `96x96` and is not suitable for high-resolution avatars._
+  _Pre-train a lip-sync expert and use it make GAN generate more lip-sync videos. However, the output shape is `96x96` and can not meet real-world needs._
   
   **DINet: Deformation Inpainting Network for Realistic Face Visually Dubbing on High Resolution Video**
   
@@ -33,7 +33,7 @@ Avatar has been a popular topic in AIGC and enpower a lot of real-world applicat
   
   AAAI 2023. [[<ins>Paper</ins>](https://arxiv.org/abs/2303.03988)] [[<ins>Code</ins>](https://github.com/MRzzm/DINet)]
   
-  
+
   
 - Diffusion-based Talking-Head Synthesis
 - NeRF-based Talking-Head Synthesis
