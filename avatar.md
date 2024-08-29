@@ -18,15 +18,23 @@ Avatar has been a popular topic in AIGC and enpower a lot of real-world applicat
 
 ### 2D Talking-Head Synthesis
 - GAN-based Talking-Head Synthesis
-  **A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild** 
+  
+  **A Lip Sync Expert Is All You Need for Speech to Lip Generation In the Wild**
+
   K R Prajwal, Rudrabha Mukhopadhyay, Vinay Namboodiri, C V Jawahar.
+  
   MM 2020. [[<ins>Paper</ins>](http://arxiv.org/abs/2008.10010)] [[<ins>Code</ins>](https://github.com/Rudrabha/Wav2Lip)]
-  > Pre-train a lip-sync expert and use it make GAN generate more lip-sync videos. However, the output shape is `96x96` and is not suitable for high-resolution avatars.
+  
+  _Pre-train a lip-sync expert and use it make GAN generate more lip-sync videos. However, the output shape is `96x96` and is not suitable for high-resolution avatars._
   
   **DINet: Deformation Inpainting Network for Realistic Face Visually Dubbing on High Resolution Video**
+  
   Zhimeng Zhang, Zhipeng Hu, Wenjin Deng, Changjie Fan, Tangjie Lv, Yu Ding.
+  
   AAAI 2023. [[<ins>Paper</ins>](https://arxiv.org/abs/2303.03988)] [[<ins>Code</ins>](https://github.com/MRzzm/DINet)]
-  > TBD
+  
+  
+  
 - Diffusion-based Talking-Head Synthesis
 - NeRF-based Talking-Head Synthesis
 
