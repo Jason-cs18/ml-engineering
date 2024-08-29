@@ -33,6 +33,7 @@ I categorize my notes on the following topics:
   - [ ] [Continuous Learning (adapt to new data)](https://jason-cs18.github.io/ml-engineering/cl_research.html)
   - [ ] [Efficient Learning and Transfer (cost-effective adaptation)](https://jason-cs18.github.io/ml-engineering/efficientml.html)
 - [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
+- [ ] [Avatar](https://jason-cs18.github.io/ml-engineering/avatar.html)
 <!-- - [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html) -->
   
 
