@@ -1,5 +1,5 @@
 ---
-title: Efficient Learning and Transfer
+title: Efficient Learning
 layout: default
 parent: Sustainable AI
 nav_order: 2
