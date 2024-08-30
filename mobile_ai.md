@@ -104,3 +104,4 @@ Profiling results on Huawei Mate 30
 
 ## References
 1. [MNN Documentation](https://mnn-docs.readthedocs.io/en/latest/)
+2. [PyTorch Profiler](https://github.com/Jason-cs18/deep-learning-profiler)
