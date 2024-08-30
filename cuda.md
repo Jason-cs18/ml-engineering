@@ -5,9 +5,7 @@ parent: Engineer
 nav_order: 12
 ---
 
-Today, PyTorch is a mainstream deep learning framework. It provides convenient python APIs to build and train deep learning models. In the hood, PyTorch uses CUDA to implement parallel computing logics on GPUs. 
-
-Although PyTorch has provided efficient CUDA implementations for most operations, the new deep learning models are still being developed. Thus, outdated operations may not be a good choice for new models. In this section, we will learn how to profile and write efficient CUDA programs for the state-of-the-art PyTorch models.
+GPU and other AI accelectors make AI models run faster. However, writing efficient parallel computing programs is not easy because it requires a deep understanding of both the hardware and the software. In this section, we will learn how to write efficient CUDA programs for PyTorch models.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
@@ -23,10 +21,18 @@ Although PyTorch has provided efficient CUDA implementations for most operations
 ## Background
 
 ### GPU Computing
-- [How GPU Computing Works](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31151/)
+[How GPU Computing Works](https://www.nvidia.com/en-us/on-demand/session/gtcspring21-s31151/)
+
+_This lecture gives a high-level introduction to the internels of GPU computing._
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
 
 ### C++ review
-- [Effective Programming In C And C++](https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/pages/lecture-notes/)
+[Effective Programming In C And C++](https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/pages/lecture-notes/)
 
 ### CUDA short courses
 - [TinyEngine and Parallel Processing](https://www.youtube.com/watch?app=desktop&v=gGcbn0ISOJM)

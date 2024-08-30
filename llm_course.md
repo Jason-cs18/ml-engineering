@@ -49,22 +49,24 @@ _As AWS reported, 90% of the machine learning demand in the cloud is for inferen
 _Key challenges: KV-cache management for long-texts and sparse computation of MoE architectures_
 
 - [ASPLOS 2023] [STI: Turbocharge NLP Inference at the Edge via Elastic
-Pipelining](https://arxiv.org/pdf/2207.05022), University of Virginia
+Pipelining](https://arxiv.org/pdf/2207.05022), University of Virginia.
 
-- [ACL 2023 Demo] [Petals: Collaborative Inference and Fine-tuning of Large Models](https://aclanthology.org/2023.acl-demo.54/), HSE University
+- [ACL 2023 Demo] [Petals: Collaborative Inference and Fine-tuning of Large Models](https://aclanthology.org/2023.acl-demo.54/), HSE University.
   - An implementation of naive model pipeline parallelisms across heterogeneous devices. 
 
 - [arXiv 2024.04] [M´elange: Cost Efficient Large Language Model Serving by
-Exploiting GPU Heterogeneity](https://arxiv.org/pdf/2404.14527), UC Berkeley
+Exploiting GPU Heterogeneity](https://arxiv.org/pdf/2404.14527), UC Berkeley.
   - A cost-efficient GPU allocation stategy for LLM serving (model request size, request rate, and latency service-level objective).
 
-- [MLSys 2024] [HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](https://arxiv.org/abs/2403.01164), National University of Singapore
+- [MLSys 2024] [HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](https://arxiv.org/abs/2403.01164), National University of Singapore.
   - A I/O aware parallel strategy for on-device LLM serving.
 
-- [ICML 2024] [HEXGEN: Generative Inference of Large Language Model
-over Heterogeneous Environment](https://arxiv.org/pdf/2311.11514), The Hong Kong University of Science and Technology and ETH Zurich
+- [ICML 2024] [HEXGEN: Generative Inference of Large Language Model over Heterogeneous Environment](https://arxiv.org/pdf/2311.11514), The Hong Kong University of Science and Technology and ETH Zurich.
     - Without a careful model partition strategy, naive pipeline and tensor parallelism lead to out-of-memory errors.
     - An [implementation](https://github.com/Relaxed-System-Lab/HexGen) that accommodates tensor model parallelism and pipeline parallelism. 
+- [ICML 2023] [The case for 4-bit precision: k-bit Inference Scaling Laws](https://arxiv.org/abs/2212.09720), University of Washington.
+  - LLM inference is a memory-bound task and 4-bit quantization is always a best choice for LLM compression. 
+
 
 ### Datasets
 1. [AzurePublicDataset](https://github.com/Azure/AzurePublicDataset): Microsoft Azure Traces  

@@ -1,5 +1,5 @@
 ---
-title: DETR Tune
+title: Hyperparameter Tune
 layout: default
 parent: Engineer
 nav_order: 6

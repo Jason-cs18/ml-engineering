@@ -1,12 +1,12 @@
 ---
-title: DETR Train
+title: Distributed Training
 layout: default
 parent: Engineer
 nav_order: 5
 ---
-Although pre-trained models perform well on open benchmarks, they are hard to obtain decent performance on domain-specific tasks because of domain gaps. For example, an pre-trained DETR usually gets low accuracy on low-light images. To bridge this gap, we have to re-train or fine-tune it with our collected new data.
-
 In this blog, we will guide you through the process of fine-tuning pre-trained DETR on [CPPE-5 dataset](https://huggingface.co/datasets/cppe-5) efficiently with Ray Train. Full code can be found [here]().
+
+> I highly recommend you use the [experiment template]() to manage all experiments.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
