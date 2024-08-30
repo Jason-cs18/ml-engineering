@@ -23,7 +23,7 @@ I categorize my notes on the following topics:
   - [ ] [Fast Generative Models (deep compression)](https://jason-cs18.github.io/ml-engineering/fast_aigc.html)
   - [ ] [Parallel Computing (LLM optimizations)](https://jason-cs18.github.io/ml-engineering/cuda.html)
   - [x] [Automation (Makefile and PyInstaller)](https://jason-cs18.github.io/ml-engineering/tools.html)
-  - [ ] [Mobile AI (MNN)](https://jason-cs18.github.io/ml-engineering/mobile_ai.html)
+  - [x] [Mobile AI (MNN)](https://jason-cs18.github.io/ml-engineering/mobile_ai.html)
   <!-- - [ ] [Inference Microservices (ONNX+FastAPI+Docker)](https://jason-cs18.github.io/ml-engineering/ai_service.html) -->
 - [Deep Learning Basics (models and training)](https://jason-cs18.github.io/ml-engineering/dl_basics.html)
   - [ ] [Transformers in NLP and Vision](https://jason-cs18.github.io/ml-engineering/transformers.html)
