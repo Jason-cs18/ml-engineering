@@ -4,16 +4,18 @@ layout: default
 parent: Engineer
 nav_order: 15
 ---
-After training a model on a server, you may want to deploy it on a mobile device. However, mobile devices have limited resources and non-GPU hardware. Therefore, it is necessary to optimize the pre-trained model to mobile format (minimal model size and mobile backend). 
-
 In this tutoral, we will guide you deploy a vision transformer model on Huawei Mate 30 via [MNN](https://www.mnn.zone/m/0.3/). MNN is developed by Alibaba and it supports on-device training/inference.
 
 ![](https://github.com/alibaba/MNN/raw/master/doc/architecture.png)
 
+![alt text](image-11.png)
+
 _image source: [MNN Github](https://github.com/alibaba/MNN)_
 
 ## Deployment Pipeline
-![](https://cdn.nlark.com/yuque/0/2019/png/400159/1565597247571-a5a4be8e-fd59-48c2-a992-462ddae8edaa.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_41%2Ctext_QWxpYmFiYQ%3D%3D%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10%2Fformat%2Cwebp)
+![alt text](image-12.png)
+
+_image source: [MNN Github](https://github.com/alibaba/MNN)_
 
 Deploy a pre-trained PyTorch model to mobile employs the following steps:
 
@@ -34,6 +36,7 @@ Deploy a pre-trained PyTorch model to mobile employs the following steps:
    # set MNN_NNAPI to ON (mobile NPU)
    mkdir build_64 && cd build_64 && ../build_64.sh
    ```
+
 ## Model Preparation
 ```python
 import onnx
@@ -76,12 +79,14 @@ torch.onnx.export(model, x, "vit.onnx", input_names=['input'], output_names=['ou
 
 ## Benchmark Results
 
-Vision Transformer
+Vision Transformer 
+
 |Model|#Param (M)|#GFLOPs|Model Size (MB)|
 |:---:|:---:|:---:|:---:|
 |vit_b_16|86.56|17.58|346.50|
 
 Profiling results on Huawei Mate 30
+
 |Device|CPU (ms)|GPU (ms)|
 |:---:|:---:|:---:|
 |Laptop (i7+1070)|236.41|5.46|
