@@ -12,6 +12,15 @@ In this tutoral, we will guide you deploy a vision transformer model on Huawei M
 
 _image source: [MNN Github](https://github.com/alibaba/MNN)_
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Deployment Pipeline](#deployment-pipeline)
+- [Installation](#installation)
+- [Model Preparation](#model-preparation)
+- [Deployment](#deployment)
+- [Benchmark Results](#benchmark-results)
+- [References](#references)
+
 ## Deployment Pipeline
 ![alt text](image-12.png)
 
