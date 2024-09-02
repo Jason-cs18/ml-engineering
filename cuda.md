@@ -16,6 +16,7 @@ GPU and other AI accelectors make AI models run faster. However, writing efficie
   - [Dive into CUDA](#dive-into-cuda)
 - [Profile PyTorch models](#profile-pytorch-models)
 - [Use optimized CUDA to accelerate PyTorch models](#use-optimized-cuda-to-accelerate-pytorch-models)
+- [Distributed Training/Tuning/Serving](#distributed-trainingtuningserving)
 - [References](#references)
 
 ## Background
@@ -42,6 +43,7 @@ _This lecture gives a high-level introduction to the internels of GPU computing.
 
 ### Dive into CUDA
 - [Github Repo] [CUDA-Mode lectures](https://github.com/cuda-mode/lectures)
+  - [Video Lecture] [Lecture 1 How to profile CUDA kernels in PyTorch](https://www.youtube.com/watch?v=LuhJEEJQgUM)
 - [Github Repo] [awesomeMLSys](https://github.com/cuda-mode/awesomeMLSys)
 
 ## Profile PyTorch models
@@ -51,6 +53,25 @@ _This lecture gives a high-level introduction to the internels of GPU computing.
 
 ## Use optimized CUDA to accelerate PyTorch models
 - [Custom C++ and CUDA Extensions](https://pytorch.org/tutorials/advanced/cpp_extension.html?highlight=cuda)
+
+## Distributed Training/Tuning/Serving
+![alt text](image-17.png)
+
+_image source: Ray Summit 2023_
+
+- Use Cases
+  - [Hands-on Tutorial] [Using PyTorch Lightning with Tune](https://docs.ray.io/en/latest/tune/examples/tune-pytorch-lightning.html#tune-pytorch-lightning-ref).
+  - [Hands-on Tutorial] [Train a Pytorch Lightning Image Classifier on Ray](https://docs.ray.io/en/latest/train/examples/lightning/lightning_mnist_example.html)
+  - [Hands-on Tutorial] [Serve an Object Detection Model on Ray](https://docs.ray.io/en/latest/serve/tutorials/object-detection.html)
+- Advanced Usage
+  - [Video Tutorial] [Redesigning Scheduling in Ray to Improve Cost-Efficiency at Scale](https://www.youtube.com/watch?v=zA2bOT7GYew)
+  - [Video Tutorial] [Deploying Many Models Efficiently with Ray Serve](https://www.youtube.com/watch?v=QUYucglQzBw)
+    - Goal (Efficient Hardware Usage and Operational Overhead)
+      - Efficient Hardware Usage (share resources, independent scaling)
+      - Operational Overhead (testing, monitoring, independent updates)
+    - Best Practices
+      - [Deploy Multiple Applications](https://docs.ray.io/en/latest/serve/multi-app.html) + [Run Multiple Applications in Different Containers](https://docs.ray.io/en/latest/serve/advanced-guides/multi-app-container.html#worker-path-field)
+      - [Model Multiplexing for Throughput-Optimized Serving](https://docs.ray.io/en/latest/serve/model-multiplexing.html)
 
 ## References
 - [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
