@@ -20,20 +20,15 @@ I categorize my notes on the following topics:
   - [x] [Hyperparameter Optimization (tuning)](https://jason-cs18.github.io/ml-engineering/detr_tune.html)
   - [x] [Monitor, Debug, Log, Test](https://jason-cs18.github.io/ml-engineering/monitor.html) 
   - [ ] [Generative AI (LLM, MLLM, Diffusion)](https://jason-cs18.github.io/ml-engineering/generative_ai.html)
-  - [ ] [Fast Generative Models (deep compression)](https://jason-cs18.github.io/ml-engineering/fast_aigc.html)
   - [ ] [Parallel Computing (LLM optimizations)](https://jason-cs18.github.io/ml-engineering/cuda.html)
   - [x] [Automation (Makefile and PyInstaller)](https://jason-cs18.github.io/ml-engineering/tools.html)
   - [x] [Mobile AI (MNN)](https://jason-cs18.github.io/ml-engineering/mobile_ai.html)
   <!-- - [ ] [Inference Microservices (ONNX+FastAPI+Docker)](https://jason-cs18.github.io/ml-engineering/ai_service.html) -->
-- [Deep Learning Basics (models and training)](https://jason-cs18.github.io/ml-engineering/dl_basics.html)
-  - [ ] [Transformers in NLP and Vision](https://jason-cs18.github.io/ml-engineering/transformers.html)
-  - [ ] [CLIP and Its Variants](https://jason-cs18.github.io/ml-engineering/clip.html)
-  - [ ] [Diffusion and Its Variants](https://jason-cs18.github.io/ml-engineering/diffusion.html)
+
 - [Research Advances on Sustainable AI](https://jason-cs18.github.io/ml-engineering/sustainable_ai.html)
   - [ ] [Continuous Learning (adapt to new data)](https://jason-cs18.github.io/ml-engineering/cl_research.html)
   - [ ] [Efficient Learning and Transfer (cost-effective adaptation)](https://jason-cs18.github.io/ml-engineering/efficientml.html)
-- [ ] [Efficient LLMs](https://jason-cs18.github.io/ml-engineering/llm_course.html)
-- [ ] [Avatar](https://jason-cs18.github.io/ml-engineering/avatar.html)
+
 <!-- - [AI Accelerator (GPU and CUDA)](https://jason-cs18.github.io/ml-engineering/ai_accelerator.html) -->
   
 

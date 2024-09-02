@@ -2,7 +2,7 @@
 title: Mobile AI
 layout: default
 parent: Engineer
-nav_order: 15
+nav_order: 14
 ---
 In this tutoral, we will guide you deploy a vision transformer model on Huawei Mate 30 via [MNN](https://www.mnn.zone/m/0.3/). MNN is developed by Alibaba and it supports on-device training/inference.
 

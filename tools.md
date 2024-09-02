@@ -2,7 +2,7 @@
 title: Automation
 layout: default
 parent: Engineer
-nav_order: 14
+nav_order: 13
 ---
 
 In Python projects, a considerable number of executable files exist that we are required to run, such as training, testing, and webui. To circumvent the need for manual execution of these files, we employ Makefile to mechanize the procedure of running them. During production delivery, it is essential to package the entire project, encompassing both the scripts and the dependencies, into a solitary executable file. This enables users to run the packaged application without having to install a Python interpreter or any associated modules.
