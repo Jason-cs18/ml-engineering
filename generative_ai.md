@@ -10,4 +10,6 @@ In this note, we will review milestone generative AI models and dive into their 
 
 ## References
 - [Github Repo] [Generative AI Roadmap](https://github.com/pittisl/Generative-AI-Tutorial), University of Pittsburgh.
+- [Github Repo] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University.
+- [Github Repo] [Awesome LLM Systems Papers](https://github.com/AmberLJC/LLMSys-PaperList), University of Michigan.
 
