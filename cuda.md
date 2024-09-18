@@ -12,6 +12,7 @@ GPU and other AI accelectors make AI models run faster. However, writing efficie
 - [Background](#background)
   - [GPU Computing](#gpu-computing)
   - [C++ review](#c-review)
+  - [Parallel Computing](#parallel-computing)
   - [CUDA short courses](#cuda-short-courses)
   - [Dive into CUDA](#dive-into-cuda)
 - [Profile PyTorch models](#profile-pytorch-models)
@@ -34,6 +35,9 @@ _This lecture gives a high-level introduction to the internels of GPU computing.
 
 ### C++ review
 [Effective Programming In C And C++](https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/pages/lecture-notes/)
+
+### Parallel Computing
+[(NYU Spring 2024) Big Data and Machine Learning Systems](https://nyu-mlsys.github.io/) basics of neural networks, how they are programmed and executed by today's deep learning frameworks, automatic differentiation, deep learning accelerators, distributed training techniques, computation graph optimizations, automated kernel generation etc.
 
 ### CUDA short courses
 - [GPU Programming (Chinese)](https://face2ai.com/program-blog/#GPU)
