@@ -8,6 +8,13 @@ favicon_ico: "/assets/images/favicon.ico"
 
 math: katex
 
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
 compress_html:
   blanklines: true
 
